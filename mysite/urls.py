@@ -18,7 +18,7 @@ from django.conf.urls import url
 from django.contrib import admin
 
 urlpatterns = [
-    #redirect to blog app
+    #redirect to portfolio app
     url(r'^', include('portfolio.urls', namespace="portfolio")),
     url(r'^portfolio/', include('portfolio.urls', namespace="portfolio")),
 

@@ -74,21 +74,9 @@
         </div>
 
         <div class="col-md-4 col-md-pull-8">
-            <h2 class="text-center"><a href="{% url 'portfolio:projects' %}"> Projects</h2>  
-            <div class="media">
-                <div class="media-left media-middle">
-                    <a href="{% url 'dynoquiz:signin' %}" target="_blank">
-                    <img class="media-object" src="{% static 'portfolio/img/quiz-icon.png' %}" alt="quiztro webiste image">
-                    </a>
-                </div>
+            <h2 class="text-center"><a href="{% url 'portfolio:projects' %}"> Projects </a></h2>
+            <!--TODO: add back in dynoquiz-->
 
-                <div class="media-body">
-                    <h3 class="media-heading"><a href="{% url 'dynoquiz:signin' %}" target="_blank">Quiztro</a></h3>
-                    <a href="{% url 'dynoquiz:signin' %}" target="_blank">Quiztro</a> is a Python/Django + Angular web app that allows users to login,
-                    create, take and share quizzes with other users.
-                </div>
-               
-            </div>
 
             <div class="media">
                 <div class="media-left media-middle">
