@@ -1,0 +1,254 @@
+{% extends "portfolio/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<script src="{% static 'portfolio/js/home.js' %}"></script>
+
+<div class="container">
+    <div class="row">
+        <div class="hidden-xs hidden-sm col-md-4"  style="background-image:url(); padding-top:55px;">
+            <img src="{% static 'portfolio/img/IMG_2218_1024.jpg' %}" class="img-responsive" alt="Responsive image">
+        </div>
+        <div class="col-md-8">
+            <div class="page-header">
+                <h1>Scott Schretzenmaier</h1>
+                <ul class="list-inline">
+                <li><strong>Email: </strong><a href="mailto:schretzy929@gmail.com">schretzy929@gmail.com</a></li>
+                <li><strong>Location: </strong>Pittsburgh, PA</li>
+            </ul>
+            </div>
+
+            <h3>ISD Rotational Engineer</h3>
+            <h4>University of Pittsburgh Medical Center</h4>
+            <h4><small>July/2014 - July/2016</small></h4>
+
+            <p class="lead">A two-year leadership development rotational program designed for its candidates to
+                develop both technical and operational insight</p>
+
+            <p><strong>UNIX Services</strong> <small>(January/2016 – July/2016)</small></p>
+            <ul>
+                <li>Served as Systems Engineer managing IBM’s
+                    AIX 6 and RHEL 6 operating systems</li>
+                <li>Deployed discovery agent across 1700 AIX and RHEL servers </li>
+                <li>Scripted Bash and KornShell processes to automate manual tasks  </li>
+            </ul>
+
+            <p><strong>Enterprise Systems Management</strong> <small>(July/2015 – January/2016)</small></p>
+            <ul>
+                <li>Drove the creation of the central IT data Warehouse project as the technical lead </li>
+                <li>Lead demos and presentations on data warehouse’s structure and data</li>
+                <li>Configured and created interactive Splunk management reports and dashboards</li>
+            </ul>
+            <p><strong>Enterprise Architecture</strong> <small>(January/2015 – July/2015)</small></p>
+            <ul>
+                <li>Created a new standardized application selection process using Microsoft CRM </li>
+                <li>Migrated application statistics and data using C# scripts</li>
+                <li>Assisted in a POC for the application archiving process</li>
+            </ul>
+            <p><strong>Corporate Service Desk</strong> <small>(July/2014 – January/2015)</small></p>
+            <ul>
+                <li>Developed the full stack for the department’s web based knowledge management tool</li>
+                <li>Designed and implemented the SQL database for UPMC’s Self Help tool </li>
+                <li>Worked as liaison between management and agents to map application requirements</li>
+            </ul>
+
+        </div>
+
+
+    </div> <!-- End Row-->
+
+    <div class="row">
+
+        <div class="col-md-8 col-md-push-4">
+            <h3>Software Engineer Intern</h3>
+            <h4>University of Pittsburgh Medical Center</h4>
+            <h4><small>June/2013 - August/2013</small></h4>
+             <p class="lead">A summer internship between my college junior and senior year</p>
+            <p><strong>E Record Custom App Development</strong></p>
+            <ul>
+                <li>Designed and developed web based tool for administering support for a hierarchy of questions</li>
+                <li>Actively participated in the team’s new agile scrum software development process </li>
+                <li>Participated in numerous interviews for open Software Engineer position with team</li>
+            </ul>
+        </div>
+
+        <div class="col-md-4 col-md-pull-8">
+            <h2 class="text-center"><a href="{% url 'portfolio:projects' %}"> Projects</h2>  
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="{% url 'dynoquiz:signin' %}" target="_blank">
+                    <img class="media-object" src="{% static 'portfolio/img/quiz-icon.png' %}" alt="quiztro webiste image">
+                    </a>
+                </div>
+
+                <div class="media-body">
+                    <h3 class="media-heading"><a href="{% url 'dynoquiz:signin' %}" target="_blank">Quiztro</a></h3>
+                    <a href="{% url 'dynoquiz:signin' %}" target="_blank">Quiztro</a> is a Python/Django + Angular web app that allows users to login,
+                    create, take and share quizzes with other users.
+                </div>
+               
+            </div>
+
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="{% url 'portfolio:self-help' %}">
+                    <img class="media-object" src="{% static 'portfolio/img/self-help-icon.png' %}" alt="Self-Help webiste image">
+                    </a>
+                </div>
+
+                <div class="media-body">
+                    <h3 class="media-heading"><a href="{% url 'portfolio:self-help' %}">ServiceBaseV</a></h3>
+                    <a href="{% url 'portfolio:self-help' %}">ServiceBaseV</a> is a .Net web application that was used by UPMC's service desk to store/manage knowledge
+                        as well as track known company issues. The backend as well as much of the frontend were used to power UPMC's
+                        Self Help site.
+                </div> 
+            </div>            
+
+        </div>
+    </div>
+    <div ng-app="home" ng-controller="HomeController" class="row">
+        <h2 class="text-center">Technical Skills</h2>
+        <ul class="list-inline text-center">
+            <li>1  = "Hello World!"</li>
+            <li>5 = Can hack together a legible project</li>
+            <li>10 = Could write a book on it</li>
+        </ul>
+
+        <div class="col-md-4">
+            <!-- Skills -->
+            <strong>Languages:</strong>
+            <ul class="list-unstyled">
+                <li>
+                    Python
+                    <percent object="65"></percent>
+                </li>
+                <li>
+                    SQL
+                    <percent object="60"></percent>
+                </li>
+                <li>
+                    JavaScript/jQuery
+                    <percent object="50"></percent>
+                </li>
+                <li>
+                    Java
+                    <percent object="50"></percent>
+                </li>
+            </ul>
+
+            <p><strong>Others Languages:</strong></p>
+            <ul class="list-inline">
+                <li>Bash</li>
+                <li>KornShell</li>
+                <li>PHP</li>
+                <li>Ruby</li>
+                <li>VBA</li>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ul>
+
+
+        </div>
+
+        <div class="col-md-4">
+            <!-- Skills -->
+            <strong>Frameworks:</strong>
+            <ul class="list-unstyled">
+                <li>Django</li>
+                    <percent object="60"></percent>
+                <li>AngularJS</li>
+                    <percent object="60"></percent>
+                <li>Bootstrap</li>
+                    <percent object="70"></percent>
+                <li>Django Rest Framework</li>
+                    <percent object="60"></percent>
+            </ul>
+
+            <p><strong>Others Frameworks:</strong></p>
+            <ul class="list-inline">
+                <li>.Net</li>
+                <li>ADO .Net Entity Framework</li>
+
+            </ul>
+
+        </div>
+
+        <div class="col-md-4">
+            <!-- Skills -->
+            <strong>Operating Systems:</strong>
+            <ul class="list-unstyled">
+                <li>Mac OS X</li>
+                    <percent object="75"></percent>
+                <li>UNIX</li>
+                    <percent object="65"></percent>
+
+                <li>Windows</li>
+                    <percent object="70"></object>
+
+            </ul>
+
+            <strong>Tools:</strong>
+            <ul class="list-inline">
+                <li>Visual Code</li>
+                <li>Open Shift</li>                
+                <li>Microsoft SSMS</li>
+                <li>Microsoft SSIS</li>
+                <li>Splunk</li>
+                <li>Version Control</li>
+                <li>NetBeans</li>
+                <li>Eclipse</li>
+                <li>VIM</li>
+                <li>Excel</li>
+                <li>PyCharm</li>
+                <li>PuTTY</li>
+            </ul>
+
+        </div>
+
+    </div> <!-- End Row -->
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2 class="text-center">Education</h2>
+            <ul class="list-unstyled">
+                <li><strong>University of Pittsburgh</strong> Pittsburgh, PA  GPA: 3.07</li>
+                <li></li>
+                <li></li>
+                <li>Graduated May 2014</li>
+            </ul>
+            <ul class="list-unstyled">
+                <li><em>Bachelor of Science in Applied Mathematics</em></li>
+                <li><em>Bachelor of Arts in Anthropology</em></li>
+                <li><em>Minor in Computer Science</em></li>
+            </ul>
+        </div>
+
+        <div class="col-md-4">
+            <h2 class="text-center">Extra Activities</h2>
+            <ul>
+                <li>All American Wrestler in PA State Competition</li>
+                <li>Ultramarathons, rowing, cycling, judo, water polo, wrestling</li>
+                <li>President and coach of the Wrestling Club, MEC Champion, NCWA National All American </li>
+                <li>IRONMAN triathlete </li>
+            </ul>
+
+        </div>
+
+        <div class="col-md-4">
+            <h2 class="text-center">Civic Endevaors</h2>
+            <ul>
+                <li>MS150 Ride for a Cure</li>
+                <li>Higher Achievement – Teacher and Student Mentor</li>
+                <li>Big Brother Big Sister</li>
+                <li>“Eye to Eye” volunteer organization – local mentoring program</li>
+                <li>Volunteer high school wrestling coach</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Home </title>
+
+    <!-- Twitter Bootstrap3 Style Sheet -->
+    <link href="{% static 'portfolio/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- AngularJS Import -->
+    <script src="{% static 'portfolio/js/angular.min.js' %}"></script>
+    
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-82720914-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+        <nav class="navbar navbar-light bg-faded">
+            <a class="navbar-brand" href="{% url 'portfolio:home' %}">S.B.S</a>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation"><a href="{% url 'portfolio:home' %}">Home</a></li>
+                <li role="presentation"><a href="{% url 'portfolio:projects' %}">Projects</a></li>
+            </ul>
+        </nav>
+
+    <div class="container">
+
+        {% block content %}
+
+        {% endblock %}
+
+<footer class="footer">
+    <div class="pull-right">
+        <p class="text-muted">Updated: 6/2016</p>
+    </div>
+</footer>
+
+    </div> <!-- End Container -->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+
+</body>
+</html>
