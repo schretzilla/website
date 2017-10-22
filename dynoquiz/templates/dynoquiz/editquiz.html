@@ -1,0 +1,105 @@
+{% extends "dynoquiz/base.html" %}
+
+{% block content %}
+
+{% load staticfiles %}
+<script src="{% static 'dynoquiz/js/quizdetail.js' %}"></script>
+<link href="{% static 'dynoquiz/css/editquiz.css' %}" rel="stylesheet">
+
+<div ng-app="quizDetail" ng-controller="QuizDetailCtrl">
+
+    <div class="row" ng-init="loadPage('{{ quiz.id }}')">
+        <div class="col-lg-6">
+            <h1><a href="{% url 'dynoquiz:quiz_detail' quiz_id=quiz.id %}">{[{curQuiz.quiz_name}]}</a> <small>edit mode</small></h1>
+            <h4>Creator: {{quiz.owner.username}} </h4>
+            <p class="lead">Description: {[{curQuiz.quiz_details}]}</p>
+
+            <form>
+
+                <div ng-repeat="question in questions">
+                    <div class="row">
+                        <div class="col-lg-1">
+                            {[{ $index + 1 }]}
+                        </div>
+                        <div class="col-lg-11">
+                            <div class="input-group">
+                            <!-- <input ng-model="question.question_text" ng-change="updateStatus()" ng-blur="updateQuestion(question)" ng-focus="persistCurText(question.question_text)" id="question.id" type="text" class="form-control input-md"> -->
+                            <input ng-model="question.question_text" ng-change="updateQuestion(question)" ng-focus="persistCurText(question.question_text)" ng-model-options="{ debounce: 1000 }" id="question.id" type="text" class="form-control input-md">
+
+                                <span class="input-group-btn">
+                                    <button ng-click="removeQuestion($index)" type="button" class="btn btn-danger btn-md">Delete</button>
+                                </span>
+                            </div>
+                        </div>
+
+                            <div class="row">
+                                <div class="col-lg-9 col-md-offset-2">
+                                    <div ng-repeat="choice in question.choices" class="radio">
+
+                                            <input ng-click="setAnswer(question, choice.id)" ng-checked="question.answer == choice.id" type="radio" name="question{[{question.id}]}" id="choice{[{choice.id}]}" value="{[{choice.id}]}">
+                                            <input ng-model="choice.choice_text" ng-change="updateChoice(choice)" ng-focus="persistCurText(choice.choice_text)" ng-model-options="{ debounce: 1000 }" name="choice{[{choice.id}]}" type="text" class="form-control input-sm">
+                                            <button ng-show="choice.choice_text == ''" ng-click="removeChoice($index, choice, question.choices)" type="button" class="btn btn-danger btn-sm">Delete</button>
+
+                                    </div>
+                                </div>
+
+                            </div> <!-- End Choices Row -->
+
+                            <div class="row">
+                                <div class="col-lg-9 col-md-offset-2">
+                                            <div class="input-group">
+                                                <input ng-model="question.newChoice" type="text" class="form-control input-sm">
+                                                <span class="input-group-btn">
+                                                    <button ng-click="addChoice(question, question.newChoice)" type="button" class="btn btn-info btn-sm">Add Choice</button>
+                                                </span>
+                                            </div>
+                                        </br>
+                                </div>
+                            </div> <!-- End Add Choice -->
+                    </div> <!-- End Questions Row -->
+
+
+                </div> <!-- End Question Repeat -->
+
+
+            </form>
+        </div> <!-- end left col -->
+
+        <div class="col-lg-6">
+            <div id="create-new-question" class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <h2>Add Question</h2>
+                        <label for="question">Question:</label>
+                        <input ng-model="questionText" type="text" class="form-control input-lg" id="question" placeholder="Question">
+                        <!-- TODO: Replace ordered list with custom ordered list so item number hide on edit -->
+                        <label>Choices:</label>
+
+                        <div ng-repeat="choice in choiceList" class="radio">
+                                <label >
+                                    <input ng-click="choice.correct=true" type="radio" name="question{[{question.id}]}">
+                                    <input ng-model="choice.choice_text" ng-change="dynamicList(choiceList, 'choice_text')" name="choice{[{choice.id}]}"  type="text" class="form-control input-default" placeholder="New Choice">
+                                </label>
+                        </div>
+                    </div> <!-- End addQuestionDiv() -->
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <button ng-click="addQuestion()" ng-disabled="!questionValid()" type="button" class="btn btn-primary">Create</button>
+                        <button ng-click="cancelQuestion()" type="button" class="btn btn-info">Cancel</button>
+                    </div>
+                </div>
+            </div> <!-- end form-horizontal -->
+
+        </div> <!-- end right col -->
+
+    </div> <!-- end row -->
+
+    <p class="bottom-right"><em ng-hide="hideStatus" ng-class="{fade:startFade}">{[{ formStatus }]}</em></p>
+
+</div> <!-- end quizdetail controller -->
+
+
+{% endblock %}
+

@@ -1,0 +1,58 @@
+{% extends "dynoquiz/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<script src="{% static 'dynoquiz/js/quizresults.js' %}"></script>
+<link href="{% static 'dynoquiz/css/quizresults.css' %}" rel="stylesheet">
+
+<div ng-app="quizResults" ng-controller="QuizResultsCtrl" ng-init="loadPage('{{ request.user.id }}', '{{ quiz.id }}')">
+
+    <div class="row">
+        <div class="col-lg-3">
+            <h3>Attempts:</h3>
+            <div class="list-group">
+              <a ng-repeat="score in scores" ng-click="setCurResults(score)" ng-class="{'active':score == curResults}" class="list-group-item">
+                  Attempt {[{$index + 1}]}:
+                  <span class="badge">{[{ score.correct}]}/{[{ score.incorrect + score.correct }]}</span>
+              </a>
+            </div>
+
+
+        </div>
+        <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h1 class="panel-heading text center"> <a href="{% url 'dynoquiz:quiz_detail' quiz_id=quiz.id %}"> {{quiz.quiz_name}} </a> <small>Score: {[{scoreString}]}</small></h1>
+                        <h4 class="text-center">Details: {{quiz.quiz_details}}</p>
+                    </div>
+                    <div class="panel-body">
+                        
+                        <h3>Results</h3>
+                        <div ng-repeat="question in questionList"  ng-switch="correctAnswer=isCorrect(question)" class="col-lg-12" >
+                            <div ng-class="{'alert alert-success': correctAnswer == true, 'alert alert-danger':correctAnswer == false}">
+                                <p >
+                                    {[{$index+1}]} {[{ question.question_text }]}
+
+                                </p>
+
+                                <ul>
+                                    <li ng-repeat="choice in question.choices" ng-switch="guess=questionChosen(question, choice)">
+                                        {[{ choice.choice_text }]}
+                                        <span ng-class="{'glyphicon glyphicon-ok': question.answer == choice.id}"></span>
+                                        <span ng-class="{'glyphicon glyphicon-remove':question.answer != choice.id  && guess == true}"></span> <!-- chosen -->
+                                        <!--<span ng-switch-when="true" class="glyphicon glyphicon-ok"></span>-->
+                                        <!--<span ng-switch-when="false" class="glyphicon glyphicon-remove" aria-hidden="true"></span> -->
+                                        <!--<span ng-class="{'glyphicon glyphicon-ok': question.answer == choice.id}" ></span> -->
+                                    </li>
+                                </ul>
+
+                            </div> <!-- End style question -->
+                        </div> <!-- End question itter -->
+                    </div> <!-- End panel body -->
+                </div> <!-- panel panel-default -->
+        </div> <!-- End Div col Right -->
+    </div>
+
+</div> <!-- end angular ctrl -->
+
+{% endblock %}
