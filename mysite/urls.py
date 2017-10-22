@@ -21,7 +21,6 @@ from dynoquiz import views
 urlpatterns = [
     #redirect to portfolio app
     url(r'^', include('portfolio.urls', namespace="portfolio")),
-    url(r'^portfolio/', include('portfolio.urls', namespace="portfolio")),
     url(r'^quiztro/', include('dynoquiz.urls', namespace="dynoquiz")),
     url(r'^admin/', admin.site.urls),
 ]
