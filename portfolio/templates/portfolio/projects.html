@@ -9,9 +9,65 @@
         <div class="page-header">
             <h1>Projects</h1>
         </div>
+    </div>
 
+    <div class="row">
 
-        <div class="col-sm-4 col-md-4">
+        <div class="col-sm-6">
+            <div class="thumbnail">
+                <img target="_blank" href="https://schretzilla.github.io/adventure-america/index" src="{% static 'portfolio/img/x-country-adventure.png' %}" alt="x-country adventure image">
+                <div class="caption">
+                    <h3><a target="_blank" href="https://schretzilla.github.io/adventure-america/index" target="_blank">Adventure America</a></h3>
+                    <p>    
+                        <h5><small>January/2017</small></h5>                                       
+                        Adventure America is an animated travel story
+                        that uses D3 to tell the story of my cross-country adventure. 
+                        </br>
+                        </br>
+                        <h5>Tools:</h5>
+                        <ul class="list-inline">
+                            <li><a href="https://d3js.org/" target="_blank">D3 v4</a> </li>
+                            <li><a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap v3</a></li>
+                            <li><a href="https://angularjs.org/" target="_blank">AngularJS</a></li>
+                            <li><a href="https://pages.github.com/" target="_blank">Hosted using GitHub Pages</a></li>
+                        </ul>
+                    </p>
+                    <p><a target="_blank" href="https://schretzilla.github.io/adventure-america/index" class="btn btn-primary" role="button">Scroll through my adventure!</a> </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="thumbnail">
+                <img href="{% url 'dynoquiz:signin' %}" src="{% static 'portfolio/img/quiz-rectangle.png' %}" alt="quiztro image">
+                <div class="caption">
+                    <h3><a href="{% url 'dynoquiz:signin' %}" target="_blank">Quiztro</a></h3>
+                    <p>    
+                        <h5><small>June/2016</small></h5>                                       
+                        Quiztro is a Python/Django + Angular web app that allows users to login,
+                        create, take and share quizzes with other users.
+                        </br>
+                        </br>
+                        <h5>Tools:</h5>
+                        <ul class="list-inline">
+                            <li><a href="https://www.djangoproject.com/" target="_blank">Django 1.9</a> </li>
+                            <li>Python 2.7</li>
+                            <li><a href="https://angularjs.org/" target="_blank">AngularJS 1</a></li>
+                            <li><a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap v3</a></li>
+                            <li><a href="http://www.django-rest-framework.org/" target="_blank">Django Rest Framework v3</a></li>
+                            <li><a href="http://www.https.postgresql.org/" target="_blank">PostgreSQL 9.2</a></li>
+                            <li><a href="https://www.openshift.com/" target="_blank">Hosted using OpenShift (small gear)</a></li>
+                        </ul>
+                    </p>
+                    <p><a target="_blank" href="{% url 'dynoquiz:signin' %}" class="btn btn-primary" role="button">Take a look!</a> </p>
+                </div>
+            </div>
+        </div>
+
+    </div> <!--end row 1-->
+
+    <div class="row">
+        <div class="col-sm-6">
             <div class="thumbnail">
             <img src="{% static 'portfolio/img/self-help.png' %}" alt="self-help image">
                 <div class="caption">
@@ -27,7 +83,7 @@
                             <li>.Net Web Application</li>
                             <li>Microsoft SQL Database</li>
                             <li>JavaScript/jQuery</li>
-                            <li><a href="http://getbootstrap.com/2.3.2/" target="_blank">Twitter Bootstrap 2</a></li>
+                            <li><a href="http://getbootstrap.com/2.3.2/" target="_blank">Twitter Bootstrap v2</a></li>
                             <li>ADO .Net Entity Framework</li>
                         </ul>
                     </p>
@@ -36,7 +92,7 @@
             </div>
         </div>
 
-        <div class="col-sm-4 col-md-4">
+        <div class="col-sm-6">
             <div class="thumbnail">
             <img src="{% static 'portfolio/img/asset-dashboard-smaller.png' %}" alt="splunk-dashboard image">
                 <div class="caption">
@@ -45,12 +101,13 @@
                     </h3>
                     <p>
                         <h5><small>November/2015</small></h5>
-I worked on the Service Asset and Configuration Management project during my time on the Enterprise Systems Management team. I created SSMS jobs to collect data from multiple applications throughout the company and centralize it in the SACM database.         </p>
-
+                            I worked on the Service Asset and Configuration Management project during my time on the Enterprise Systems Management team.
+                            I created SSIS jobs to collect data from multiple applications throughout the company and centralize it in the SACM database.         
                         <h5>Tools:</h5>
                         <ul class="list-inline">
                             <li>Microsoft SQL Database</li>
                             <li><a href="https://en.wikipedia.org/wiki/SQL_Server_Management_Studio" target="_blank">SSMS</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/SQL_Server_Integration_Services" target="_blank">SSIS</a></li>
                             <li><a href="http://www.splunk.com/" target="_blank">Splunk</a></li>
                         </ul>
                     </p>
@@ -58,7 +115,7 @@ I worked on the Service Asset and Configuration Management project during my tim
                 </div>
             </div>
         </div>
-    </div><!-- end row -->
+    </div><!-- end row 2 -->
 </div> <!-- end container -->
 
 {% endblock %}

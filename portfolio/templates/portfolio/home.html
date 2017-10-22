@@ -9,17 +9,62 @@
     <div class="row">
         <div class="hidden-xs hidden-sm col-md-4"  style="background-image:url(); padding-top:55px;">
             <img src="{% static 'portfolio/img/IMG_2218_1024.jpg' %}" class="img-responsive" alt="Responsive image">
+
+            <h2 class="text-center"><a href="{% url 'portfolio:projects' %}"> Projects</h2>  
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="https://schretzilla.github.io/adventure-america/index" target="_blank">
+                    <img class="media-object" src="{% static 'portfolio/img/x-country-adventure.ico' %}" alt="x country adventure image">
+                    </a>
+                </div>
+
+                <div class="media-body">
+                    <h3><a href="https://schretzilla.github.io/adventure-america/index" target="_blank">Adventure America</a></h3>
+                    <a href="https://schretzilla.github.io/adventure-america/index" target="_blank">Adventure America</a> is an animated travel story
+                    that uses D3 to tell the story of my cross-country adventure. 
+                </div>
+
+            </div>
+
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="{% url 'dynoquiz:signin' %}" target="_blank">
+                    <img class="media-object" src="{% static 'portfolio/img/quiz-icon.png' %}" alt="quiztro webiste image">
+                    </a>
+                </div>
+
+                <div class="media-body">
+                    <h3 class="media-heading"><a href="{% url 'dynoquiz:signin' %}" target="_blank">Quiztro</a></h3>
+                    <a href="{% url 'dynoquiz:signin' %}" target="_blank">Quiztro</a> is a Python/Django + Angular web app that allows users to login,
+                    create, take and share quizzes with other users.
+                </div>
+               
+            </div>
         </div>
         <div class="col-md-8">
             <div class="page-header">
                 <h1>Scott Schretzenmaier</h1>
                 <ul class="list-inline">
-                <li><strong>Email: </strong><a href="mailto:schretzy929@gmail.com">schretzy929@gmail.com</a></li>
-                <li><strong>Location: </strong>Pittsburgh, PA</li>
-            </ul>
+                    <li><strong>Email: </strong><a href="mailto:schretzy929@gmail.com">schretzy929@gmail.com</a></li>
+                    <li><strong>Location: </strong>Pittsburgh, PA</li>
+                </ul>
             </div>
 
-            <h3>ISD Rotational Engineer</h3>
+            <h3>Cross Country Traveler </h3>
+            <h4><small>August/2016 - January/2017</small></h4>
+            <p class="lead">A solo 6 month adventure across America summarized 
+                <a target="_blank" href="https://schretzilla.github.io/adventure-america/index" >here</a>
+                using D3
+            </p>
+
+            <p><strong>Solo Adventurer</strong></p>
+            <ul>
+                <li>Volunteered with Samaritan’s Purse helping Louisiana flood victims </li>
+                <li>Summited 24 of Colorado’s 14,000+ foot mountains </li>
+                <li>Confirmed strategy and required actions for my five-year plan</li>
+            </ul>
+
+            <h3>ISD Rotational Engineer </h3>
             <h4>University of Pittsburgh Medical Center</h4>
             <h4><small>July/2014 - July/2016</small></h4>
 
@@ -74,9 +119,38 @@
         </div>
 
         <div class="col-md-4 col-md-pull-8">
-            <h2 class="text-center"><a href="{% url 'portfolio:projects' %}"> Projects </a></h2>
-            <!--TODO: add back in dynoquiz-->
+            <div class="visible-sm visible-xs">
+                <h2 class="text-center"><a href="{% url 'portfolio:projects' %}"> Projects</h2>  
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <a href="https://schretzilla.github.io/adventure-america/index" target="_blank">
+                        <img class="media-object" src="{% static 'portfolio/img/x-country-adventure.ico' %}" alt="x country adventure image">
+                        </a>
+                    </div>
 
+                    <div class="media-body">
+                        <h3><a href="https://schretzilla.github.io/adventure-america/index" target="_blank">Adventure America</a></h3>
+                        <a href="https://schretzilla.github.io/adventure-america/index" target="_blank">Adventure America</a> is an animated travel story
+                        that uses D3 to tell the story of my cross-country adventure. 
+                    </div>
+
+                </div>
+
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <a href="{% url 'dynoquiz:signin' %}" target="_blank">
+                        <img class="media-object" src="{% static 'portfolio/img/quiz-icon.png' %}" alt="quiztro webiste image">
+                        </a>
+                    </div>
+
+                    <div class="media-body">
+                        <h3 class="media-heading"><a href="{% url 'dynoquiz:signin' %}" target="_blank">Quiztro</a></h3>
+                        <a href="{% url 'dynoquiz:signin' %}" target="_blank">Quiztro</a> is a Python/Django + Angular web app that allows users to login,
+                        create, take and share quizzes with other users.
+                    </div>
+                
+                </div>
+            </div>
 
             <div class="media">
                 <div class="media-left media-middle">
@@ -98,9 +172,9 @@
     <div ng-app="home" ng-controller="HomeController" class="row">
         <h2 class="text-center">Technical Skills</h2>
         <ul class="list-inline text-center">
-            <li>1  = "Hello World!"</li>
-            <li>5 = Can hack together a legible project</li>
-            <li>10 = Could write a book on it</li>
+            <li>1 = "Hello World!"</li>
+            <li>5 = Built projects using it</li>
+            <li>10 = Could write a book about it</li>
         </ul>
 
         <div class="col-md-4">
@@ -112,15 +186,15 @@
                     <percent object="65"></percent>
                 </li>
                 <li>
+                    Java
+                    <percent object="65"></percent>
+                </li>
+                <li>
                     SQL
                     <percent object="60"></percent>
                 </li>
                 <li>
                     JavaScript/jQuery
-                    <percent object="50"></percent>
-                </li>
-                <li>
-                    Java
                     <percent object="50"></percent>
                 </li>
             </ul>
@@ -157,7 +231,7 @@
             <ul class="list-inline">
                 <li>.Net</li>
                 <li>ADO .Net Entity Framework</li>
-
+                <li>D3</li>
             </ul>
 
         </div>
@@ -227,6 +301,7 @@
         <div class="col-md-4">
             <h2 class="text-center">Civic Endevaors</h2>
             <ul>
+                <li>Samaritan’s Purse - Flood victims site worker </li>
                 <li>MS150 Ride for a Cure</li>
                 <li>Higher Achievement – Teacher and Student Mentor</li>
                 <li>Big Brother Big Sister</li>
