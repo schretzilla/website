@@ -14,3 +14,6 @@ def projects(request):
 
 def sacm(request):
     return render(request, 'portfolio/sacm.html', context=None)
+
+def resume(request):
+    return render(request, 'portfolio/resume.html', context=None)
