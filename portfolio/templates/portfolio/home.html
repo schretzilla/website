@@ -40,15 +40,47 @@
                 </div>
                
             </div>
+
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="{% url 'portfolio:self-help' %}">
+                    <img class="media-object" src="{% static 'portfolio/img/self-help-icon.png' %}" alt="Self-Help webiste image">
+                    </a>
+                </div>
+
+                <div class="media-body">
+                    <h3 class="media-heading"><a href="{% url 'portfolio:self-help' %}">ServiceBaseV</a></h3>
+                    <a href="{% url 'portfolio:self-help' %}">ServiceBaseV</a> is a .Net web application that was used by UPMC's service desk to store/manage knowledge
+                        as well as track known company issues. The backend as well as much of the frontend were used to power UPMC's
+                        Self Help site.
+                </div>
+            </div>
+
         </div>
         <div class="col-md-8">
             <div class="page-header">
                 <h1>Scott Schretzenmaier</h1>
                 <ul class="list-inline">
                     <li><strong>Email: </strong><a href="mailto:schretzy929@gmail.com">schretzy929@gmail.com</a></li>
-                    <li><strong>Location: </strong>Pittsburgh, PA</li>
+                    <li><strong>Location: </strong>Los Angeles, CA</li>
+                    <li>Resume: <a href="{% url 'portfolio:resume' %}" target="_blank">PDF</a></li>
                 </ul>
             </div>
+
+            <!--Northrop Grumman-->
+            <h3>Software Engineer </h3>
+            <h4>Northrop Grumman</h4>
+            <h4><small>March/2017 - Current</small></h4>
+
+            <p class="lead">Worked on an agile team of engineers designing and developing mission planning software
+                for the B1 Bomber</p>
+
+            <p><strong>JMPS B1UPC Mission Systems</strong> </p>
+            <ul>
+                <li>Developed / implemented release sequencing algorithms and GUI tools</li>
+                <li>Conducted live tests and demos for the application’s new features, enhancements and bug fixes</li>
+                <li>Engaged in long term application design sessions as well as short term sprint planning meetings</li>
+            </ul>
 
             <h3>Cross Country Traveler </h3>
             <h4><small>August/2016 - January/2017</small></h4>
@@ -57,6 +89,7 @@
                 using D3
             </p>
 
+            <!--Solo Adventurer Section-->
             <p><strong>Solo Adventurer</strong></p>
             <ul>
                 <li>Volunteered with Samaritan’s Purse helping Louisiana flood victims </li>
@@ -64,6 +97,8 @@
                 <li>Confirmed strategy and required actions for my five-year plan</li>
             </ul>
 
+
+            <!--UPMC ISDR Program-->
             <h3>ISD Rotational Engineer </h3>
             <h4>University of Pittsburgh Medical Center</h4>
             <h4><small>July/2014 - July/2016</small></h4>
@@ -105,6 +140,7 @@
 
     <div class="row">
 
+        <!--UPMC Internship-->
         <div class="col-md-8 col-md-push-4">
             <h3>Software Engineer Intern</h3>
             <h4>University of Pittsburgh Medical Center</h4>
@@ -120,7 +156,7 @@
 
         <div class="col-md-4 col-md-pull-8">
             <div class="visible-sm visible-xs">
-                <h2 class="text-center"><a href="{% url 'portfolio:projects' %}"> Projects</h2>  
+                <h2 class="text-center"><a href="{% url 'portfolio:projects' %}"> Projects</a> </h2>
                 <div class="media">
                     <div class="media-left media-middle">
                         <a href="https://schretzilla.github.io/adventure-america/index" target="_blank">
@@ -150,22 +186,23 @@
                     </div>
                 
                 </div>
-            </div>
 
-            <div class="media">
-                <div class="media-left media-middle">
-                    <a href="{% url 'portfolio:self-help' %}">
-                    <img class="media-object" src="{% static 'portfolio/img/self-help-icon.png' %}" alt="Self-Help webiste image">
-                    </a>
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <a href="{% url 'portfolio:self-help' %}">
+                        <img class="media-object" src="{% static 'portfolio/img/self-help-icon.png' %}" alt="Self-Help webiste image">
+                        </a>
+                    </div>
+
+                    <div class="media-body">
+                        <h3 class="media-heading"><a href="{% url 'portfolio:self-help' %}">ServiceBaseV</a></h3>
+                        <a href="{% url 'portfolio:self-help' %}">ServiceBaseV</a> is a .Net web application that was used by UPMC's service desk to store/manage knowledge
+                            as well as track known company issues. The backend as well as much of the frontend were used to power UPMC's
+                            Self Help site.
+                    </div>
                 </div>
 
-                <div class="media-body">
-                    <h3 class="media-heading"><a href="{% url 'portfolio:self-help' %}">ServiceBaseV</a></h3>
-                    <a href="{% url 'portfolio:self-help' %}">ServiceBaseV</a> is a .Net web application that was used by UPMC's service desk to store/manage knowledge
-                        as well as track known company issues. The backend as well as much of the frontend were used to power UPMC's
-                        Self Help site.
-                </div> 
-            </div>            
+            </div>
 
         </div>
     </div>
@@ -182,15 +219,15 @@
             <strong>Languages:</strong>
             <ul class="list-unstyled">
                 <li>
+                    C#
+                    <percent object="75"></percent>
+                </li>
+                <li>
                     Python
                     <percent object="65"></percent>
                 </li>
                 <li>
                     Java
-                    <percent object="65"></percent>
-                </li>
-                <li>
-                    SQL
                     <percent object="60"></percent>
                 </li>
                 <li>
