@@ -3,351 +3,549 @@
 
 {% block content %}
 
+<style>
+    .parallax {
+        /* The image used */
+        background-image: url("{% static 'portfolio/img/mountains-background.jpg' %}");
+    
+        /* Set a specific height */
+        min-height: 700px; 
+    
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .vertical-center {
+        position: absolute;
+        top: 10%;
+        left: 0;
+       bottom: 90%;
+       right: 0;
+       margin: auto;
+       color: white;
+    }
+
+    .jumbotron {
+        background-color: transparent;
+    }
+
+    .dl-horizontal {
+        font-size: 30;
+    }
+
+    .subject-header {
+        font-weight:normal;
+        color:#000000;
+        word-spacing:2pt;
+        font-size:70px;
+        text-align:left;
+        font-family:georgia, serif;
+        text-align: center;
+
+    }
+
+    .company-name {
+        font-weight:normal;
+        color:#000000;
+        letter-spacing:2pt;
+        word-spacing:2pt;
+        font-size:50px;
+        text-align:left;
+        font-family:georgia, serif;
+        line-height:1;
+    }
+
+    .subject-sub-date {
+        font-weight:normal;
+        color:#000000;
+        margin-top:40px;
+        font-size:30px;
+        font-family:georgia, serif;
+        line-height:1;
+    }
+
+    .job-title {
+        font-weight:normal;
+        color:#000000;
+        word-spacing:2pt;
+        font-size:40px;
+        text-align:left;
+        font-family:georgia, serif;
+    }
+
+    .job-description {
+        font-size: 25px;
+        color: #515151;
+    }
+
+    .job-team-name {
+        font-weight:normal;
+        color:#000000;
+        font-size:30px;
+        text-align:left;
+        font-family:georgia, serif;
+    }
+
+    .job-key-points {
+        font-weight:normal;
+        color:#000000;
+        font-size:20px;
+        text-align:left;
+        font-family:georgia, serif;
+    }
+
+    .top-buffer { 
+        margin-top:50px; 
+    }
+
+    
+</style>
+
+<script type="text/javascript" src="{% static 'portfolio/js/d3.v4.js' %}"></script>        
 <script src="{% static 'portfolio/js/home.js' %}"></script>
+<script src="{% static 'portfolio/js/animated-timeline.js' %}"></script>
 
-<div class="container">
-    <div class="row">
-        <div class="hidden-xs hidden-sm col-md-4"  style="background-image:url(); padding-top:55px;">
-            <img src="{% static 'portfolio/img/IMG_2218_1024.jpg' %}" class="img-responsive" alt="Responsive image">
-
-            <h2 class="text-center"><a href="{% url 'portfolio:projects' %}"> Projects</h2>  
-            <div class="media">
-                <div class="media-left media-middle">
-                    <a href="https://schretzilla.github.io/adventure-america/index" target="_blank">
-                    <img class="media-object" src="{% static 'portfolio/img/x-country-adventure.ico' %}" alt="x country adventure image">
-                    </a>
-                </div>
-
-                <div class="media-body">
-                    <h3><a href="https://schretzilla.github.io/adventure-america/index" target="_blank">Adventure America</a></h3>
-                    <a href="https://schretzilla.github.io/adventure-america/index" target="_blank">Adventure America</a> is an animated travel story
-                    that uses D3 to tell the story of my cross-country adventure. 
-                </div>
-
+<div class="parallax">
+    <div class="container">
+            <div class="vertical-center jumbotron">
+                    <h1 class="text-center">Scott Schretzenmaier</h1>
+                    <p class="lead text-center">
+                        Software Engineer, Bug Squsher, Solution Discoverer
+                    </p>                    
+                    
             </div>
-
-            <div class="media">
-                <div class="media-left media-middle">
-                    <a href="{% url 'dynoquiz:signin' %}" target="_blank">
-                    <img class="media-object" src="{% static 'portfolio/img/quiz-icon.png' %}" alt="ExQuizit webiste image">
-                    </a>
-                </div>
-
-                <div class="media-body">
-                    <h3 class="media-heading"><a href="{% url 'dynoquiz:signin' %}" target="_blank">ExQuizit</a></h3>
-                    <a href="{% url 'dynoquiz:signin' %}" target="_blank">ExQuizit</a> is a Python/Django + Angular web app that allows users to login,
-                    create, take and share quizzes with other users.
-                </div>
-               
-            </div>
-
-            <div class="media">
-                <div class="media-left media-middle">
-                    <a href="{% url 'portfolio:self-help' %}">
-                    <img class="media-object" src="{% static 'portfolio/img/self-help-icon.png' %}" alt="Self-Help webiste image">
-                    </a>
-                </div>
-
-                <div class="media-body">
-                    <h3 class="media-heading"><a href="{% url 'portfolio:self-help' %}">ServiceBaseV</a></h3>
-                    <a href="{% url 'portfolio:self-help' %}">ServiceBaseV</a> is a .Net web application that was used by UPMC's service desk to store/manage knowledge
-                        as well as track known company issues. The backend as well as much of the frontend were used to power UPMC's
-                        Self Help site.
-                </div>
-            </div>
-
-        </div>
-        <div class="col-md-8">
-            <div class="page-header">
-                <h1>Scott Schretzenmaier</h1>
-                <ul class="list-inline">
-                    <li><strong>Email: </strong><a href="mailto:schretzy929@gmail.com">schretzy929@gmail.com</a></li>
-                    <li><strong>Location: </strong>Los Angeles, CA</li>
-                    <li>Resume: <a href="https://drive.google.com/file/d/0BwQCR7d920riZ3pjWHUwUnBKdkU/view?usp=sharing" target="_blank">PDF</a></li>
-                </ul>
-            </div>
-
-            <!--Northrop Grumman-->
-            <h3>Software Engineer </h3>
-            <h4>Northrop Grumman</h4>
-            <h4><small>March/2017 - Current</small></h4>
-
-            <p class="lead">Currently working with an agile team of talented engineers designing and developing the best mission planning software for the B1 Bomber</p>
-
-            <p><strong>B1 Bomber Mission Planning Team</strong> </p>
-            <ul>
-                <li>Developed / implemented mission planning algorithms and GUI tools using C# and .Net</li>
-                <li>Conducted live tests and demos for the application’s new features, enhancements and bug fixes</li>
-                <li>Engaged in long term application design sessions as well as short term sprint planning meetings</li>
-            </ul>
-
-            <h3>Cross Country Traveler </h3>
-            <h4><small>August/2016 - January/2017</small></h4>
-            <p class="lead">A solo 6 month adventure across America summarized 
-                <a target="_blank" href="https://schretzilla.github.io/adventure-america/index" >here</a>
-                using D3
-            </p>
-
-            <!--Solo Adventurer Section-->
-            <p><strong>Solo Adventurer</strong></p>
-            <ul>
-                <li>Volunteered with Samaritan’s Purse helping Louisiana flood victims </li>
-                <li>Summited 24 of Colorado’s 14,000+ foot mountains </li>
-                <li>Confirmed strategy and required actions for my five-year plan</li>
-            </ul>
-
-
-            <!--UPMC ISDR Program-->
-            <h3>ISD Rotational Engineer </h3>
-            <h4>University of Pittsburgh Medical Center</h4>
-            <h4><small>July/2014 - July/2016</small></h4>
-
-            <p class="lead">A two-year leadership development rotational program designed for its candidates to
-                develop both technical and operational insight</p>
-
-            <p><strong>UNIX Services</strong> <small>(January/2016 – July/2016)</small></p>
-            <ul>
-                <li>Served as Systems Engineer managing IBM’s
-                    AIX 6 and RHEL 6 operating systems</li>
-                <li>Deployed discovery agent across 1700 AIX and RHEL servers </li>
-                <li>Scripted Bash and KornShell processes to automate manual tasks  </li>
-            </ul>
-
-            <p><strong>Enterprise Systems Management</strong> <small>(July/2015 – January/2016)</small></p>
-            <ul>
-                <li>Drove the creation of the central IT data Warehouse project as the technical lead </li>
-                <li>Lead demos and presentations on data warehouse’s structure and data</li>
-                <li>Configured and created interactive Splunk management reports and dashboards</li>
-            </ul>
-            <p><strong>Enterprise Architecture</strong> <small>(January/2015 – July/2015)</small></p>
-            <ul>
-                <li>Created a new standardized application selection process using Microsoft CRM </li>
-                <li>Migrated application statistics and data using C# scripts</li>
-                <li>Assisted in a POC for the application archiving process</li>
-            </ul>
-            <p><strong>Corporate Service Desk</strong> <small>(July/2014 – January/2015)</small></p>
-            <ul>
-                <li>Developed the full stack for the department’s web based knowledge management tool</li>
-                <li>Designed and implemented the SQL database for UPMC’s Self Help tool </li>
-                <li>Worked as liaison between management and agents to map application requirements</li>
-            </ul>
-
-        </div>
-
-
-    </div> <!-- End Row-->
-
-    <div class="row">
-
-        <!--UPMC Internship-->
-        <div class="col-md-8 col-md-push-4">
-            <h3>Software Engineer Intern</h3>
-            <h4>University of Pittsburgh Medical Center</h4>
-            <h4><small>June/2013 - August/2013</small></h4>
-             <p class="lead">A summer internship between my college junior and senior year</p>
-            <p><strong>E Record Custom App Development</strong></p>
-            <ul>
-                <li>Designed and developed web based tool for administering support for a hierarchy of questions</li>
-                <li>Actively participated in the team’s new agile scrum software development process </li>
-                <li>Participated in numerous interviews for open Software Engineer position with team</li>
-            </ul>
-        </div>
-
-        <div class="col-md-4 col-md-pull-8">
-            <div class="visible-sm visible-xs">
-                <h2 class="text-center"><a href="{% url 'portfolio:projects' %}"> Projects</a> </h2>
-                <div class="media">
-                    <div class="media-left media-middle">
-                        <a href="https://schretzilla.github.io/adventure-america/index" target="_blank">
-                        <img class="media-object" src="{% static 'portfolio/img/x-country-adventure.ico' %}" alt="x country adventure image">
-                        </a>
-                    </div>
-
-                    <div class="media-body">
-                        <h3><a href="https://schretzilla.github.io/adventure-america/index" target="_blank">Adventure America</a></h3>
-                        <a href="https://schretzilla.github.io/adventure-america/index" target="_blank">Adventure America</a> is an animated travel story
-                        that uses D3 to tell the story of my cross-country adventure. 
-                    </div>
-
-                </div>
-
-                <div class="media">
-                    <div class="media-left media-middle">
-                        <a href="{% url 'dynoquiz:signin' %}" target="_blank">
-                        <img class="media-object" src="{% static 'portfolio/img/quiz-icon.png' %}" alt="ExQuizit webiste image">
-                        </a>
-                    </div>
-
-                    <div class="media-body">
-                        <h3 class="media-heading"><a href="{% url 'dynoquiz:signin' %}" target="_blank">ExQuizit</a></h3>
-                        <a href="{% url 'dynoquiz:signin' %}" target="_blank">ExQuizit</a> is a Python/Django + Angular web app that allows users to login,
-                        create, take and share quizzes with other users.
-                    </div>
-                
-                </div>
-
-                <div class="media">
-                    <div class="media-left media-middle">
-                        <a href="{% url 'portfolio:self-help' %}">
-                        <img class="media-object" src="{% static 'portfolio/img/self-help-icon.png' %}" alt="Self-Help webiste image">
-                        </a>
-                    </div>
-
-                    <div class="media-body">
-                        <h3 class="media-heading"><a href="{% url 'portfolio:self-help' %}">ServiceBaseV</a></h3>
-                        <a href="{% url 'portfolio:self-help' %}">ServiceBaseV</a> is a .Net web application that was used by UPMC's service desk to store/manage knowledge
-                            as well as track known company issues. The backend as well as much of the frontend were used to power UPMC's
-                            Self Help site.
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
     </div>
-    <div ng-app="home" ng-controller="HomeController" class="row">
-        <h2 class="text-center">Technical Skills</h2>
-        <ul class="list-inline text-center">
-            <li>1 = "Hello World!"</li>
-            <li>5 = Built projects using it</li>
-            <li>10 = Could write a book about it</li>
-        </ul>
 
-        <div class="col-md-4">
-            <!-- Skills -->
-            <strong>Languages:</strong>
-            <ul class="list-unstyled">
-                <li>
-                    C#
-                    <percent object="80"></percent>
-                </li>
-                <li>
-                    Python
-                    <percent object="65"></percent>
-                </li>
-                <li>
-                    Java
-                    <percent object="60"></percent>
-                </li>
-                <li>
-                    JavaScript/jQuery
-                    <percent object="50"></percent>
-                </li>
-            </ul>
-
-            <p><strong>Others Languages:</strong></p>
-            <ul class="list-inline">
-                <li>Bash</li>
-                <li>KornShell</li>
-                <li>PHP</li>
-                <li>Ruby</li>
-                <li>VBA</li>
-                <li>HTML</li>
-                <li>CSS</li>
-            </ul>
-
-
-        </div>
-
-        <div class="col-md-4">
-            <!-- Skills -->
-            <strong>Frameworks:</strong>
-            <ul class="list-unstyled">
-                <li>Django</li>
-                    <percent object="60"></percent>
-                <li>AngularJS</li>
-                    <percent object="60"></percent>
-                <li>Bootstrap</li>
-                    <percent object="70"></percent>
-                <li>Django Rest Framework</li>
-                    <percent object="60"></percent>
-            </ul>
-
-            <p><strong>Others Frameworks:</strong></p>
-            <ul class="list-inline">
-                <li>.Net</li>
-                <li>ADO .Net Entity Framework</li>
-                <li>D3</li>
-            </ul>
-
-        </div>
-
-        <div class="col-md-4">
-            <!-- Skills -->
-            <strong>Operating Systems:</strong>
-            <ul class="list-unstyled">
-                <li>Mac OS X</li>
-                    <percent object="75"></percent>
-                <li>UNIX</li>
-                    <percent object="65"></percent>
-
-                <li>Windows</li>
-                    <percent object="70"></object>
-
-            </ul>
-
-            <strong>Tools:</strong>
-            <ul class="list-inline">
-                <li>Visual Code</li>
-                <li>Open Shift</li>                
-                <li>Microsoft SSMS</li>
-                <li>Microsoft SSIS</li>
-                <li>Splunk</li>
-                <li>Version Control</li>
-                <li>NetBeans</li>
-                <li>Eclipse</li>
-                <li>VIM</li>
-                <li>Excel</li>
-                <li>PyCharm</li>
-                <li>PuTTY</li>
-            </ul>
-
-        </div>
-
-    </div> <!-- End Row -->
-
-
-    <div class="row">
-        <div class="col-md-4">
-            <h2 class="text-center">Education</h2>
-            <ul class="list-unstyled">
-                <li><strong>University of Pittsburgh</strong> Pittsburgh, PA  GPA: 3.07</li>
-                <li></li>
-                <li></li>
-                <li>Graduated May 2014</li>
-            </ul>
-            <ul class="list-unstyled">
-                <li><em>Bachelor of Science in Applied Mathematics</em></li>
-                <li><em>Bachelor of Arts in Anthropology</em></li>
-                <li><em>Minor in Computer Science</em></li>
-            </ul>
-        </div>
-
-        <div class="col-md-4">
-            <h2 class="text-center">Extra Activities</h2>
-            <ul>
-                <li>All American Wrestler in PA State Competition</li>
-                <li>Ultramarathons, rowing, cycling, judo, water polo, wrestling</li>
-                <li>President and coach of the Wrestling Club, MEC Champion, NCWA National All American </li>
-                <li>IRONMAN triathlete </li>
-            </ul>
-
-        </div>
-
-        <div class="col-md-4">
-            <h2 class="text-center">Civic Endevaors</h2>
-            <ul>
-                <li>Samaritan’s Purse - Flood victims site worker </li>
-                <li>MS150 Ride for a Cure</li>
-                <li>Higher Achievement – Teacher and Student Mentor</li>
-                <li>Big Brother Big Sister</li>
-                <li>“Eye to Eye” volunteer organization – local mentoring program</li>
-                <li>Volunteer high school wrestling coach</li>
-            </ul>
-        </div>
-    </div>
 </div>
 
+<div class="container">
+
+    <!-- About -->
+    <div class="row top-buffer">
+        <div class="col-md-4">
+            <img src="{% static 'portfolio/img/mountaineering-1.png' %}" class="img-responsive" alt="Profile Image"/>                
+        </div> <!--Col left -->
+
+        <div class="col-md-6 col-md-offset-1">
+            <div class="page-header">
+                    <h1 class="subject-header">Hi, I'm Scott</h1>
+                    <p class="lead">I'm a motivated guy who loves building software and pushing the limits. 
+                        I've 
+                    </p>
+                    
+                    <dl class="dl-horizontal">
+                        <dt>title</dt>
+                        <dd>info about that title</dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt>title</dt>
+                        <dd>info about that title</dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt>title</dt>
+                        <dd>info about that title</dd>
+                    </dl>
+
+                    <ul class="list-inline">
+                        <li><strong>Email: </strong><a href="mailto:schretzy929@gmail.com">schretzy929@gmail.com</a></li>
+                        <li><strong>Location: </strong>Los Angeles, CA</li>
+                        <li>Resume: <a href="https://drive.google.com/file/d/0BwQCR7d920riZ3pjWHUwUnBKdkU/view?usp=sharing" target="_blank">PDF</a></li>
+                    </ul>
+                    
+            </div>
+        </div><!-- Col Right-->
+    </div> <!-- End About Row -->
+
+    <!-- Experience -->
+    <div ng-app="lineAnimation" class="row top-buffer">
+            <!-- Animated Timeline -->
+            <div  id="canvas" ng-controller="myCtrl" class="col-md-2">
+
+            </div> <!-- End Animated Timeline Col-->
+
+            <div id="experience-col" class="col-md-10">
+                <h1 class=subject-header>Experience</h1>                            
+
+                <!-- Northrop Grumman Header -->
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2 id="Northrop-Header" class="company-name">- Northrop Grumman -</h2>
+                        <h2 class="job-title ">Software Engineer</h2>                        
+                    </div>
+                    <div class="col-md-4">
+                        <h2 class="subject-sub-date"><small>March/2017-Current</small></h2>                                                            
+                    </div>
+                </div>
+                <!--Northrop Grumman Header-->
+
+                <!--Northrop Grumman Keypoints-->
+                <div class="row">
+                    <p class="job-description">I'm currently working with an agile team of 
+                            talented engineers designing and developing the best mission planning software for the B1 Bomber.</p>
+        
+                        <p class="job-team-name">B1 Bomber Mission Planning Team </p>
+                        <ul>
+                            <li class="job-key-points">Developed / implemented mission planning algorithms and GUI tools using C# and .Net</li>
+                            <li class="job-key-points">Conducted live tests and demos for the application’s new features, enhancements and bug fixes</li>
+                            <li class="job-key-points">Engaged in long term application design sessions as well as short term sprint planning meetings</li>
+                        </ul>
+                </div> <!-- End Northrop Grumman Keypoints -->
+                
+                <!--Solo Adventurer Section-->
+                <div class="row">
+                    <div class="col-md-8">
+                            <h2 id="X-Country-Header" class="company-name">Cross Country Traveler </h2>
+                            <h2 class="job-title ">Solo Adventurer</h2>                            
+                            <p class="lead">A solo 6 month adventure across America summarized 
+                                <a target="_blank" href="https://schretzilla.github.io/adventure-america/index" >here</a>
+                                using D3
+                            </p>
+                    </div>
+
+                    <div class="cold-md-4">
+                            <h3><small>August/2016 - January/2017</small></h3>                            
+                    </div>
+                </div> <!-- X Country Travler Header -->
+                
+                <!-- X Country Travler Keypoints -->
+                <div class="row">
+                    <ul>
+                        <li>Volunteered with Samaritan’s Purse helping Louisiana flood victims </li>
+                        <li>Summited 24 of Colorado’s 14,000+ foot mountains </li>
+                        <li>Confirmed strategy and required actions for my five-year plan</li>
+                    </ul>
+                </div> <!-- End X Country Travler Keypoints -->
+
+                <!--UPMC ISDR Program-->
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2 class="company-name">University of Pittsburgh Medical Center </h2>
+                        <h2>ISD Rotational Engineer </h2>
+                        <p class="lead">A two-year leadership development rotational program designed for its candidates to
+                        develop both technical and operational insight</p>
+                        
+                    </div>
+                    <div class="col-md-2">
+                        <h4><small>July/2014 - July/2016</small></h4>
+                    </div>
+                </div> <!-- End ISDR Header -->
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <p><strong>UNIX Services</strong> <small>(January/2016 – July/2016)</small></p>
+                        <ul>
+                            <li>Served as Systems Engineer managing IBM’s
+                                AIX 6 and RHEL 6 operating systems</li>
+                            <li>Deployed discovery agent across 1700 AIX and RHEL servers </li>
+                            <li>Scripted Bash and KornShell processes to automate manual tasks  </li>
+                        </ul>
+
+                        <p><strong>Enterprise Systems Management</strong> <small>(July/2015 – January/2016)</small></p>
+                        <ul>
+                            <li>Drove the creation of the central IT data Warehouse project as the technical lead </li>
+                            <li>Lead demos and presentations on data warehouse’s structure and data</li>
+                            <li>Configured and created interactive Splunk management reports and dashboards</li>
+                        </ul>
+                        <p><strong>Enterprise Architecture</strong> <small>(January/2015 – July/2015)</small></p>
+                        <ul>
+                            <li>Created a new standardized application selection process using Microsoft CRM </li>
+                            <li>Migrated application statistics and data using C# scripts</li>
+                            <li>Assisted in a POC for the application archiving process</li>
+                        </ul>
+                        <p><strong>Corporate Service Desk</strong> <small>(July/2014 – January/2015)</small></p>
+                        <ul>
+                            <li>Developed the full stack for the department’s web based knowledge management tool</li>
+                            <li>Designed and implemented the SQL database for UPMC’s Self Help tool </li>
+                            <li>Worked as liaison between management and agents to map application requirements</li>
+                        </ul>
+                    </div>
+                </div> <!-- End UPMC ISDR Keypoints -->
+
+                <!--UPMC Internship-->
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2 class="company-name">University of Pittsburgh Medical Center</h2>
+                        <h2>Software Engineer Intern</h2>
+                    </div>
+                    <div class="col-md-2">
+                        <h4><small>June/2013 - August/2013</small></h4>
+                    </div>
+                </div> <!-- End UPMC Internship Header -->
+
+                <div class="row">
+                    <p class="lead">A summer internship between my college junior and senior year</p>
+                    <p><strong>E Record Custom App Development</strong></p>
+                    <ul>
+                        <li>Designed and developed web based tool for administering support for a hierarchy of questions</li>
+                        <li>Actively participated in the team’s new agile scrum software development process </li>
+                        <li>Participated in numerous interviews for open Software Engineer position with team</li>
+                    </ul>
+                </div> <!-- End UPMC Internship Keypoints -->
 
 
+            </div> <!-- End Col Experiences Section -->
+
+
+        </div> <!-- End Experience -->
+
+    <!-- Projects -->
+    <div class="row top-buffer">
+        <div class="col-md-10 col-md-offset-1">
+            <h1 class="subject-header"><a href="{% url 'portfolio:projects' %}">Projects</a></h1>
+                
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="thumbnail">
+                        <img target="_blank" href="https://schretzilla.github.io/adventure-america/index" src="{% static 'portfolio/img/x-country-adventure.png' %}" alt="x-country adventure image">
+                        <div class="caption">
+                            <h3><a target="_blank" href="https://schretzilla.github.io/adventure-america/index" target="_blank">Adventure America</a></h3>
+                            <p>    
+                                <h5><small>January/2017</small></h5>                                       
+                                Adventure America is an animated travel story
+                                that uses D3 to tell the story of my cross-country adventure. 
+                                </br>
+                                </br>
+                                <h5>Tools:</h5>
+                                <ul class="list-inline">
+                                    <li><a href="https://d3js.org/" target="_blank">D3 v4</a> </li>
+                                    <li><a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap v3</a></li>
+                                    <li><a href="https://angularjs.org/" target="_blank">AngularJS</a></li>
+                                    <li><a href="https://pages.github.com/" target="_blank">Hosted using GitHub Pages</a></li>
+                                </ul>
+                            </p>
+                            <p><a target="_blank" href="https://schretzilla.github.io/adventure-america/index" class="btn btn-primary" role="button">Scroll through my adventure!</a> </p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-sm-6">
+                    <div class="thumbnail">
+                        <img href="{% url 'dynoquiz:signin' %}" src="{% static 'portfolio/img/quiz-rectangle.png' %}" alt="ExQuizit image">
+                        <div class="caption">
+                            <h3><a href="{% url 'dynoquiz:signin' %}" target="_blank">ExQuizit</a></h3>
+                            <p>    
+                                <h5><small>June/2016</small></h5>                                       
+                                ExQuizit is a Python/Django + Angular web app that allows users to login,
+                                create, take and share quizzes with other users.
+                                </br>
+                                </br>
+                                <h5>Tools:</h5>
+                                <ul class="list-inline">
+                                    <li><a href="https://www.djangoproject.com/" target="_blank">Django 1.9</a> </li>
+                                    <li>Python 2.7</li>
+                                    <li><a href="https://angularjs.org/" target="_blank">AngularJS 1</a></li>
+                                    <li><a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap v3</a></li>
+                                    <li><a href="http://www.django-rest-framework.org/" target="_blank">Django Rest Framework v3</a></li>
+                                    <li><a href="http://www.https.postgresql.org/" target="_blank">PostgreSQL 9.2</a></li>
+                                    <li><a href="https://www.openshift.com/" target="_blank">Hosted using OpenShift (small gear)</a></li>
+                                </ul>
+                            </p>
+                            <p><a target="_blank" href="{% url 'dynoquiz:signin' %}" class="btn btn-primary" role="button">Take a look!</a> </p>
+                        </div>
+                    </div>
+                </div>
+            
+            </div> <!--end row 1-->
+            
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="thumbnail">
+                        <img src="{% static 'portfolio/img/self-help.png' %}" alt="self-help image">
+                        <div class="caption">
+                            <h3>
+                                <a href="{% url 'portfolio:self-help' %}">ServiceBaseV</a> 
+                            </h3>
+                            <p>
+                                <h5><small>January/2015</small></h5>
+                                    I created ServiceBaseV during my time at the service desk. SBV is a .Net web app for departmental knowledge management and problem tracking. I migrated the data from SBIV’s Access database to SBVs Microsoft SQL database using SSMS. On top of the database I built a web interface for the app using .Net and jQuery so that the department could have easy access to the information.
+                                <h5>Tools:</h5>
+                                <ul class="list-inline">
+                                    <li>C#</li>
+                                    <li>.Net Web Application</li>
+                                    <li>Microsoft SQL Database</li>
+                                    <li>JavaScript/jQuery</li>
+                                    <li><a href="http://getbootstrap.com/2.3.2/" target="_blank">Twitter Bootstrap v2</a></li>
+                                    <li>ADO .Net Entity Framework</li>
+                                </ul>
+                            </p>
+                            <p><a href="{% url 'portfolio:self-help' %}" class="btn btn-primary" role="button">More Info</a></p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-sm-6">
+                    <div class="thumbnail">
+                        <img src="{% static 'portfolio/img/asset-dashboard-smaller.png' %}" alt="splunk-dashboard image">
+                        <div class="caption">
+                            <h3>
+                                <a href="{% url 'portfolio:sacm' %}">Asset Data Warehouse</a>
+                            </h3>
+                            <p>
+                                <h5><small>November/2015</small></h5>
+                                    I worked on the Service Asset and Configuration Management project during my time on the Enterprise Systems Management team.
+                                    I created SSIS jobs to collect data from multiple applications throughout the company and centralize it in the SACM database.         
+                                <h5>Tools:</h5>
+                                <ul class="list-inline">
+                                    <li>Microsoft SQL Database</li>
+                                    <li><a href="https://en.wikipedia.org/wiki/SQL_Server_Management_Studio" target="_blank">SSMS</a></li>
+                                    <li><a href="https://en.wikipedia.org/wiki/SQL_Server_Integration_Services" target="_blank">SSIS</a></li>
+                                    <li><a href="http://www.splunk.com/" target="_blank">Splunk</a></li>
+                                </ul>
+                            </p>
+                            <p><a href="{% url 'portfolio:sacm' %}" class="btn btn-primary" role="button">More Info</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end row 2 -->
+        </div>
+    </div>
+    <!-- End Projects Row -->
+
+    <div ng-app="home" ng-controller="HomeController" class="row top-buffer">
+            <h1 class="subject-header">I've Got Some Skills...</h2>
+            <ul class="list-inline text-center">
+                <li>1 = "Hello World!"</li>
+                <li>5 = Built projects using it</li>
+                <li>10 = Could write a book about it</li>
+            </ul>
+
+            <div class="col-md-4">
+                <!-- Skills -->
+                <strong>Languages:</strong>
+                <ul class="list-unstyled">
+                    <li>
+                        C#
+                        <percent object="80"></percent>
+                    </li>
+                    <li>
+                        Python
+                        <percent object="65"></percent>
+                    </li>
+                    <li>
+                        Java
+                        <percent object="60"></percent>
+                    </li>
+                    <li>
+                        JavaScript/jQuery
+                        <percent object="50"></percent>
+                    </li>
+                </ul>
+
+                <p><strong>Others Languages:</strong></p>
+                <ul class="list-inline">
+                    <li>Bash</li>
+                    <li>KornShell</li>
+                    <li>PHP</li>
+                    <li>Ruby</li>
+                    <li>VBA</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+
+
+            </div>
+
+            <div class="col-md-4">
+                <!-- Skills -->
+                <strong>Frameworks:</strong>
+                <ul class="list-unstyled">
+                    <li>Django</li>
+                        <percent object="60"></percent>
+                    <li>AngularJS</li>
+                        <percent object="60"></percent>
+                    <li>Bootstrap</li>
+                        <percent object="70"></percent>
+                    <li>Django Rest Framework</li>
+                        <percent object="60"></percent>
+                </ul>
+
+                <p><strong>Others Frameworks:</strong></p>
+                <ul class="list-inline">
+                    <li>.Net</li>
+                    <li>ADO .Net Entity Framework</li>
+                    <li>D3</li>
+                </ul>
+
+            </div>
+
+            <div class="col-md-4">
+                <!-- Skills -->
+                <strong>Operating Systems:</strong>
+                <ul class="list-unstyled">
+                    <li>Mac OS X</li>
+                        <percent object="75"></percent>
+                    <li>UNIX</li>
+                        <percent object="65"></percent>
+
+                    <li>Windows</li>
+                        <percent object="70"></object>
+
+                </ul>
+
+                <strong>Tools:</strong>
+                <ul class="list-inline">
+                    <li>Visual Code</li>
+                    <li>Open Shift</li>                
+                    <li>Microsoft SSMS</li>
+                    <li>Microsoft SSIS</li>
+                    <li>Splunk</li>
+                    <li>Version Control</li>
+                    <li>NetBeans</li>
+                    <li>Eclipse</li>
+                    <li>VIM</li>
+                    <li>Excel</li>
+                    <li>PyCharm</li>
+                    <li>PuTTY</li>
+                </ul>
+
+            </div>
+        
+    </div> <!-- End Skills Row-->
+
+    <!-- Extras Section-->
+    <div class="row">
+                <div class="col-md-4">
+                    <h2 class="text-center">Education</h2>
+                    <ul class="list-unstyled">
+                        <li><strong>University of Pittsburgh</strong> Pittsburgh, PA  GPA: 3.07</li>
+                        <li></li>
+                        <li></li>
+                        <li>Graduated May 2014</li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li><em>Bachelor of Science in Applied Mathematics</em></li>
+                        <li><em>Bachelor of Arts in Anthropology</em></li>
+                        <li><em>Minor in Computer Science</em></li>
+                    </ul>
+                </div>
+    
+                <div class="col-md-4">
+                    <h2 class="text-center">Extra Activities</h2>
+                    <ul>
+                        <li>All American Wrestler in PA State Competition</li>
+                        <li>Ultramarathons, rowing, cycling, judo, water polo, wrestling</li>
+                        <li>President and coach of the Wrestling Club, MEC Champion, NCWA National All American </li>
+                        <li>IRONMAN triathlete </li>
+                    </ul>
+    
+                </div>
+    
+                <div class="col-md-4">
+                    <h2 class="text-center">Civic Endevaors</h2>
+                    <ul>
+                        <li>Samaritan’s Purse - Flood victims site worker </li>
+                        <li>MS150 Ride for a Cure</li>
+                        <li>Higher Achievement – Teacher and Student Mentor</li>
+                        <li>Big Brother Big Sister</li>
+                        <li>“Eye to Eye” volunteer organization – local mentoring program</li>
+                        <li>Volunteer high school wrestling coach</li>
+                    </ul>
+                </div>
+            </div>
+    </div> <!-- End Extras Row -->
+</div>
 {% endblock %}
