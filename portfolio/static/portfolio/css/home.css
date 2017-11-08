@@ -1,0 +1,108 @@
+
+
+.vertical-center {
+    position: absolute;
+    top: 10%;
+    left: 0;
+   bottom: 90%;
+   right: 0;
+   margin: auto;
+   color: white;
+}
+
+.jumbotron {
+    background-color: transparent;
+}
+
+.dl-horizontal {
+    font-size: 30;
+}
+
+.subject-header {
+    font-weight:normal;
+    color:#000000;
+    word-spacing:2pt;
+    font-size:70px;
+    text-align:left;
+    font-family:georgia, serif;
+    text-align: center;
+
+}
+
+.company-name {
+    font-weight:normal;
+    color:#000000;
+    letter-spacing:2pt;
+    word-spacing:2pt;
+    font-size:50px;
+    text-align:left;
+    font-family:georgia, serif;
+    line-height:1;
+}
+
+.subject-sub-date {
+    font-weight:normal;
+    color:#000000;
+    margin-top:40px;
+    font-size:30px;
+    font-family:georgia, serif;
+    line-height:1;
+}
+
+.small-date {
+    font-weight:normal;
+    color:#000000;
+    font-size:15px;
+    font-family:georgia, serif;
+    line-height:1;
+}
+.job-title {
+    font-weight:normal;
+    color:#000000;
+    word-spacing:2pt;
+    font-size:40px;
+    text-align:left;
+    font-family:georgia, serif;
+}
+
+.isdr-job-title {
+    font-weight:normal;
+    color:#000000;
+    word-spacing:2pt;
+    font-size:30px;
+    text-align:left;
+    font-family:georgia, serif;
+}
+
+.job-description {
+    font-size: 25px;
+    color: #515151;
+}
+
+.job-team-name {
+    font-weight:normal;
+    color:#000000;
+    font-size:30px;
+    text-align:left;
+    font-family:georgia, serif;
+}
+
+.job-key-points {
+    font-weight:normal;
+    color:#000000;
+    font-size:20px;
+    text-align:left;
+    font-family:georgia, serif;
+}
+
+.top-buffer { 
+    margin-top:50px; 
+}
+
+.contact-info {
+    font-size: 15px;
+}
+
+.about-me {
+    font-size: 25px;
+}

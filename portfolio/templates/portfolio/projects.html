@@ -3,11 +3,13 @@
 
 {% block content %}
 
-<div class="continer">
-
+<div class="container">
+        
     <div class="row">
-        <div class="page-header">
-            <h1>Projects</h1>
+        <div class="col-md-12">
+            <div class="page-header">
+                <h1>Projects</h1>
+            </div>
         </div>
     </div>
 
@@ -56,7 +58,7 @@
                             <li><a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap v3</a></li>
                             <li><a href="http://www.django-rest-framework.org/" target="_blank">Django Rest Framework v3</a></li>
                             <li><a href="http://www.https.postgresql.org/" target="_blank">PostgreSQL 9.2</a></li>
-                            <li><a href="https://www.openshift.com/" target="_blank">Hosted using OpenShift (small gear)</a></li>
+                            <li><a href="https://www.heroku.com/" target="_blank">Hosted using Heroku</a></li>
                         </ul>
                     </p>
                     <p><a target="_blank" href="{% url 'dynoquiz:signin' %}" class="btn btn-primary" role="button">Take a look!</a> </p>
@@ -116,6 +118,7 @@
             </div>
         </div>
     </div><!-- end row 2 -->
+
 </div> <!-- end container -->
 
 {% endblock %}
