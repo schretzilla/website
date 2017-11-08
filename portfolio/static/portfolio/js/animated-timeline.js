@@ -200,7 +200,7 @@ app.controller('myCtrl', ['$scope', '$document', '$window', function($scope, $do
                     curEle.segmentAnimated = true;
                 } else {
                     AnimatePointToPoint(horizontalPosition, curEle.positionForPoint, 
-                        bottom, pointRadius, lineThickness);
+                        curEle.absolutePositionBottom, pointRadius, lineThickness);
                     curEle.segmentAnimated = true;
                 }
                 
