@@ -106,3 +106,21 @@
 .about-me {
     font-size: 25px;
 }
+
+.parallax {
+    /* Set a specific height */
+    min-height: 1000px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Turn off parallax scrolling for tablets and phones.*/
+@media only screen and (max-device-width: 1024px) {
+.parallax {
+    background-attachment: scroll;
+}
+}
