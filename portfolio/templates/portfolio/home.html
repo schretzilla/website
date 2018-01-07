@@ -228,6 +228,31 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="thumbnail">
+                        <img target="_blank" href="https://schretzilla.github.io/adventure-america/index" src="{% static 'portfolio/img/algorithm-animation.png' %}" alt="algorithm animation image">
+                        <div class="caption">
+                            <h3><a target="_blank" href="https://schretzilla.github.io/Algorithim-Animation/shuffling-circles.html" target="_blank">Algorithm Animation</a></h3>
+                            <p>    
+                                <h5><small>January/2018</small></h5>                                       
+                                    My flight back to LA from Philly took forever, so I used it as 
+                                    an opportunity to build animations for some common sorting algorithms using D3.
+                                    Here I randomly generate weighted lists of circles then, with the click of a 
+                                    button, I animate each step of the algorithm.
+                                </br>
+                                </br>
+                                <h5>Tools:</h5>
+                                <ul class="list-inline">
+                                    <li><a href="https://d3js.org/" target="_blank">D3 v4</a> </li>
+                                    <li><a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap v3</a></li>
+                                    <li><a href="https://pages.github.com/" target="_blank">Hosted using GitHub Pages</a></li>
+                                </ul>
+                            </p>
+                            <p><a target="_blank" href="https://schretzilla.github.io/Algorithim-Animation/shuffling-circles.html" class="btn btn-primary" role="button">Watch some animated sorting!</a> </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="thumbnail">
                         <img target="_blank" href="https://schretzilla.github.io/adventure-america/index" src="{% static 'portfolio/img/x-country-adventure.png' %}" alt="x-country adventure image">
                         <div class="caption">
                             <h3><a target="_blank" href="https://schretzilla.github.io/adventure-america/index" target="_blank">Adventure America</a></h3>
@@ -250,36 +275,37 @@
                     </div>
                 </div>
         
-                <div class="col-sm-6">
-                    <div class="thumbnail">
-                        <img href="{% url 'dynoquiz:signin' %}" src="{% static 'portfolio/img/quiz-rectangle.png' %}" alt="ExQuizit image">
-                        <div class="caption">
-                            <h3><a href="{% url 'dynoquiz:signin' %}" target="_blank">ExQuizit</a></h3>
-                            <p>    
-                                <h5><small>June/2016</small></h5>                                       
-                                ExQuizit is a Python/Django + Angular web app that allows users to login,
-                                create, take and share quizzes with other users.
-                                </br>
-                                </br>
-                                <h5>Tools:</h5>
-                                <ul class="list-inline">
-                                    <li><a href="https://www.djangoproject.com/" target="_blank">Django 1.9</a> </li>
-                                    <li>Python 2.7</li>
-                                    <li><a href="https://angularjs.org/" target="_blank">AngularJS 1</a></li>
-                                    <li><a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap v3</a></li>
-                                    <li><a href="http://www.django-rest-framework.org/" target="_blank">Django Rest Framework v3</a></li>
-                                    <li><a href="http://www.https.postgresql.org/" target="_blank">PostgreSQL 9.2</a></li>
-                                    <li><a href="https://www.heroku.com/" target="_blank">Hosted using Heroku</a></li>
-                                </ul>
-                            </p>
-                            <p><a target="_blank" href="{% url 'dynoquiz:signin' %}" class="btn btn-primary" role="button">Take a look!</a> </p>
-                        </div>
-                    </div>
-                </div>
+                
             
             </div> <!--end row 1-->
             
             <div class="row">
+                    <div class="col-sm-6">
+                            <div class="thumbnail">
+                                <img href="{% url 'dynoquiz:signin' %}" src="{% static 'portfolio/img/quiz-rectangle.png' %}" alt="ExQuizit image">
+                                <div class="caption">
+                                    <h3><a href="{% url 'dynoquiz:signin' %}" target="_blank">ExQuizit</a></h3>
+                                    <p>    
+                                        <h5><small>June/2016</small></h5>                                       
+                                        ExQuizit is a Python/Django + Angular web app that allows users to login,
+                                        create, take and share quizzes with other users.
+                                        </br>
+                                        </br>
+                                        <h5>Tools:</h5>
+                                        <ul class="list-inline">
+                                            <li><a href="https://www.djangoproject.com/" target="_blank">Django 1.9</a> </li>
+                                            <li>Python 2.7</li>
+                                            <li><a href="https://angularjs.org/" target="_blank">AngularJS 1</a></li>
+                                            <li><a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap v3</a></li>
+                                            <li><a href="http://www.django-rest-framework.org/" target="_blank">Django Rest Framework v3</a></li>
+                                            <li><a href="http://www.https.postgresql.org/" target="_blank">PostgreSQL 9.2</a></li>
+                                            <li><a href="https://www.heroku.com/" target="_blank">Hosted using Heroku</a></li>
+                                        </ul>
+                                    </p>
+                                    <p><a target="_blank" href="{% url 'dynoquiz:signin' %}" class="btn btn-primary" role="button">Take a look!</a> </p>
+                                </div>
+                            </div>
+                        </div>
                 <div class="col-sm-6">
                     <div class="thumbnail">
                         <img src="{% static 'portfolio/img/self-help.png' %}" alt="self-help image">
@@ -305,30 +331,34 @@
                     </div>
                 </div>
         
-                <div class="col-sm-6">
-                    <div class="thumbnail">
-                        <img src="{% static 'portfolio/img/asset-dashboard-smaller.png' %}" alt="splunk-dashboard image">
-                        <div class="caption">
-                            <h3>
-                                <a href="{% url 'portfolio:sacm' %}">Asset Data Warehouse</a>
-                            </h3>
-                            <p>
-                                <h5><small>November/2015</small></h5>
-                                    I worked on the Service Asset and Configuration Management project during my time on the Enterprise Systems Management team.
-                                    I created SSIS jobs to collect data from multiple applications throughout the company and centralize it in the SACM database.         
-                                <h5>Tools:</h5>
-                                <ul class="list-inline">
-                                    <li>Microsoft SQL Database</li>
-                                    <li><a href="https://en.wikipedia.org/wiki/SQL_Server_Management_Studio" target="_blank">SSMS</a></li>
-                                    <li><a href="https://en.wikipedia.org/wiki/SQL_Server_Integration_Services" target="_blank">SSIS</a></li>
-                                    <li><a href="http://www.splunk.com/" target="_blank">Splunk</a></li>
-                                </ul>
-                            </p>
-                            <p><a href="{% url 'portfolio:sacm' %}" class="btn btn-primary" role="button">More Info</a></p>
-                        </div>
-                    </div>
-                </div>
+                
             </div><!-- end row 2 -->
+
+            <div class="row">
+                    <div class="col-sm-6">
+                            <div class="thumbnail">
+                                <img src="{% static 'portfolio/img/asset-dashboard-smaller.png' %}" alt="splunk-dashboard image">
+                                <div class="caption">
+                                    <h3>
+                                        <a href="{% url 'portfolio:sacm' %}">Asset Data Warehouse</a>
+                                    </h3>
+                                    <p>
+                                        <h5><small>November/2015</small></h5>
+                                            I worked on the Service Asset and Configuration Management project during my time on the Enterprise Systems Management team.
+                                            I created SSIS jobs to collect data from multiple applications throughout the company and centralize it in the SACM database.         
+                                        <h5>Tools:</h5>
+                                        <ul class="list-inline">
+                                            <li>Microsoft SQL Database</li>
+                                            <li><a href="https://en.wikipedia.org/wiki/SQL_Server_Management_Studio" target="_blank">SSMS</a></li>
+                                            <li><a href="https://en.wikipedia.org/wiki/SQL_Server_Integration_Services" target="_blank">SSIS</a></li>
+                                            <li><a href="http://www.splunk.com/" target="_blank">Splunk</a></li>
+                                        </ul>
+                                    </p>
+                                    <p><a href="{% url 'portfolio:sacm' %}" class="btn btn-primary" role="button">More Info</a></p>
+                                </div>
+                            </div>
+                        </div>
+            </div>
         </div>
     </div>
     <!-- End Projects Row -->
@@ -496,7 +526,7 @@
 <div class="container">
         <footer class="footer">
             <div class="pull-right">
-                <p class="text-muted">Updated: 10/2017</p>
+                <p class="text-muted">Updated: 1/2018</p>
             </div>
         </footer>
     </div>
