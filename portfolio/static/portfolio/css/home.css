@@ -109,7 +109,7 @@
 
 .parallax {
     /* The image used */
-    background-image: url("style/img/delicate-arch.jpg");
+    background-image: url("../img/delicate-arch.jpg");
 
     /* Set a specific height */
     min-height: 1000px; 
@@ -124,9 +124,9 @@
 
 /* Turn off parallax scrolling for tablets and phones.*/
 @media only screen and (max-device-width: 1024px) {
-.parallax {
-    background-attachment: scroll;
-}
+    .parallax {
+        background-attachment: scroll;
+    }
 }
 
 body {
