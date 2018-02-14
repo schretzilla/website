@@ -1,0 +1,95 @@
+{% extends "portfolio/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<style>
+  .img-responsive {
+  display: inline-block;
+}
+</style>
+<div class="container">
+
+
+    <div class="row">
+      <div class="col-sm-12">
+          <div class="page-header">
+              <h1>Project Smart Egg</h1>
+              <h4><small>February/2018</small></h4>
+          </div>
+          
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Why do we need such a smart egg?</h3>
+
+            <p class="lead">
+                Traditionally, in an egg drop contest, the objective is to build a device that will safely carry an egg from a multi-story drop to the ground. As you can imagine, the results of this competition are very binary. The egg either breaks, or it doesn’t, but where’s the fun in that? In order to make things a little more interesting the Fablab held a “Hatchathon” one afternoon that introduced me to a great group of dedicated engineers. 
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <img src="{% static 'portfolio/img/smart-egg/egg-together-2.png' %}" class="img-responsive" alt="Teamwork Photo">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-6">
+            <img src="{% static 'portfolio/img/smart-egg/yolk-front.jpg' %}" class="img-responsive center-block" alt="Front of the Yolk">
+        </div>
+        <div class="col-sm-6">
+            <h3>At the Yolk of the Smart Egg:</h3>
+            <p class="lead">
+                Using an ESP32 with an accelerometer we were able to develop a “Smart Egg.” One of the great things about the ESP32 is that it can be used as a Wi-Fi hotspot. By hosting an asynchronous web server on the ESP32 I was able to create a controller for the accelerometer readings. Integrating with the ESP32’s API, a connected user could record multiple drops and graph their data. To graph the data I used the Highchart’s framework, which allowed for some pretty detailed analysis of the eggs accelerometer readings. However, in case the user wanted to do more research, I also created an ability to download the recorded data so that further analysis could be done post drop on the user’s own device. 
+              </p>
+        </div>
+
+        
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+              <h3>Takeaways:</h3>
+              <p class="lead">
+                  Overall this was one of my favorite projects to date. I’ve never worked with such a diverse group of talent before.  There were definitely a lot of things I would have done differently had I known what I knew now, however that’s kind of the fun part about it. This was the first time I’ve seen a full project transition from an idea on paper all the way to a completed physical object. This small afternoon project turned into a 2-month side project and the end result was the smartest egg on the planet (self proclaimed but I’m thinking competition isn’t’ too tough here). 
+              </p>
+
+            <h3>My Eggheads:</h3>
+            <p class="lead">
+              Together these guys and I managed to design, create, and deploy 25 smart eggs for students competing in E-Week:
+            </p>
+            <p class="lead">
+                1. Garret Gray was able to write up the C++ code to read from the accelerometer
+            </p>
+
+            <p class="lead">
+                2. Andrew Miyaguchi worked with the ESP32’s asynchronous webserver as well as API.
+            </p>
+
+            <p class="lead">
+              3. Oscar Castillo used his design and modeling mastery to design a beautiful 3D printed egg that simply screws together with no extra parts required.                
+              </p>
+
+            <p class="lead">
+              4. Zach Levine did a good amount of solderng and put together much needed documentation for the egg.
+            </p>
+
+            <p class="lead">
+                <h3>Tools:</h3>
+                    <ul class="list-inline">
+                        <li><a href="https://www.espressif.com/en/products/hardware/esp32/overview" target="_blank">ESP32</a> </li>
+                        <li><a href="https://www.highcharts.com/" target="_blank">Highcharts JS</a> </li>                    
+                        <li>A 3D printed egg</li>
+                        <li><a href="https://bulma.io/" target="_blank">Bluma's CSS Framework</a></li>
+                    </ul>
+                </p>
+        </div>
+
+        <div class="col-sm-6">
+            <img src="{% static 'portfolio/img/smart-egg/candid-teamwork.png' %}" class="img-responsive" alt="Teamwork Photo">
+        </div>
+
+      </div> <!-- end row -->
+
+</div>
+{% endblock %}

@@ -14,3 +14,6 @@ def projects(request):
 
 def sacm(request):
     return render(request, 'portfolio/sacm.html', context=None)
+
+def smart_egg(request):
+    return render(request, 'portfolio/smart-egg.html', context=None)
