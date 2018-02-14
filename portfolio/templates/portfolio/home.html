@@ -230,9 +230,9 @@
                 <!-- Smart Egg -->
                 <div class="col-sm-6">
                         <div class="thumbnail">
-                            <img target="_blank" href="" src="{% static 'portfolio/img/smart-egg/egg-parts-ss.png' %}" alt="Smart Egg Parts image">
+                            <img href="{% url 'portfolio:smart-egg' %}" src="{% static 'portfolio/img/smart-egg/egg-parts-ss.png' %}" alt="Smart Egg Parts image">
                             <div class="caption">
-                                <h3><a target="_blank" href="" target="_blank">Project Smart Egg</a></h3>
+                                <h3><a href="{% url 'portfolio:smart-egg' %}" >Project Smart Egg</a></h3>
                                 <p>    
                                     <h5><small>February/2018</small></h5>                                       
                                         A weekend "Hatchathon" at the Fablab produced some eggcellent results.
@@ -244,7 +244,7 @@
                                         <li><a href="https://bulma.io/" target="_blank">Bluma's CSS Framework</a></li>
                                     </ul>
                                 </p>
-                                <p><a target="_blank" href="" class="btn btn-primary" role="button">More details</a> </p>
+                                <p><a href="{% url 'portfolio:smart-egg' %}" class="btn btn-primary" role="button">More details</a> </p>
                             </div>
                         </div>
                     </div>
