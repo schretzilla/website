@@ -226,6 +226,35 @@
             <h1 class="subject-header"><a href="{% url 'portfolio:projects' %}">Projects</a></h1>
                 
             <div class="row">
+
+                <!-- Smart Egg -->
+                <div class="col-sm-6">
+                        <div class="thumbnail">
+                            <img target="_blank" href="" src="{% static 'portfolio/img/smart-egg/egg-parts-ss.png' %}" alt="Smart Egg Parts image">
+                            <div class="caption">
+                                <h3><a target="_blank" href="" target="_blank">Project Smart Egg</a></h3>
+                                <p>    
+                                    <h5><small>February/2018</small></h5>                                       
+                                        A weekend "Hatchathon" at the Fablab produced some eggcellent results.
+                                        
+                                        <!-- introduced me to a fun group dedicated engineers. Our objective was 
+                                        to develope a "Smart Egg" that could de
+                                        The classic egg drop competition is extreamly binary, the egg either breaks or it doesn't. Working with a 
+                                        group of dedicated engineers we were determined make things a little more competitive by creating a "Smart Egg." -->
+                                    
+                                    <h5>Tools:</h5>
+                                    <ul class="list-inline">
+                                        <li><a href="https://www.espressif.com/en/products/hardware/esp32/overview" target="_blank">ESP32</a> </li>
+                                        <li>A 3D printed egg</li>
+                                        <li><a href="https://bulma.io/" target="_blank">Bluma's CSS Framework</a></li>
+                                    </ul>
+                                </p>
+                                <p><a target="_blank" href="" class="btn btn-primary" role="button">More details</a> </p>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Algorithim-Animations -->
                 <div class="col-sm-6">
                     <div class="thumbnail">
                         <img target="_blank" href="https://schretzilla.github.io/Algorithim-Animation/bubble-sort.html" src="{% static 'portfolio/img/algorithm-animation.png' %}" alt="algorithm animation image">
@@ -250,7 +279,11 @@
                         </div>
                     </div>
                 </div>
-
+            </div> <!--end row 1-->
+            
+            <!-- Row 2 -->
+            <div class="row">
+                <!-- Adventure America -->
                 <div class="col-sm-6">
                     <div class="thumbnail">
                         <img target="_blank" href="https://schretzilla.github.io/adventure-america/index" src="{% static 'portfolio/img/x-country-adventure.png' %}" alt="x-country adventure image">
@@ -275,9 +308,6 @@
                     </div>
                 </div>
             
-            </div> <!--end row 1-->
-            
-            <div class="row">
                 <div class="col-sm-6">
                     <div class="thumbnail">
                         <img href="{% url 'dynoquiz:signin' %}" src="{% static 'portfolio/img/quiz-rectangle.png' %}" alt="ExQuizit image">
@@ -304,6 +334,10 @@
                         </div>
                     </div>
                 </div>
+            </div><!-- end row 2 -->
+
+            <!-- row 3 -->
+            <div class="row">
                 <div class="col-sm-6">
                     <div class="thumbnail">
                         <img src="{% static 'portfolio/img/self-help.png' %}" alt="self-help image">
@@ -328,10 +362,8 @@
                         </div>
                     </div>
                 </div>          
-            </div><!-- end row 2 -->
 
-            <!-- row 3 -->
-            <div class="row">
+            
                 <div class="col-sm-6">
                     <div class="thumbnail">
                         <img src="{% static 'portfolio/img/asset-dashboard-smaller.png' %}" alt="splunk-dashboard image">
