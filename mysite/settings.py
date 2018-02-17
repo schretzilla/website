@@ -34,7 +34,8 @@ else:
     #prod settings
     DEBUG = False
     SECRET_KEY=os.environ.get('SECRET_KEY')
-    ALLOWED_HOSTS = ['schretzilla.herokuapp.com', 'www.schretzilla.com']
+    ALLOWED_HOSTS = ['schretzilla.herokuapp.com', 'www.schretzilla.com', 
+    'www.hammerandnails.us']
 
 
 # Application definition
