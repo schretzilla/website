@@ -6,12 +6,11 @@
     <meta charset="UTF-8">
     <title>Home </title>
 
-    <!-- Twitter Bootstrap3 Style Sheet -->
-    <!-- <link href="{% static 'portfolio/css/bootstrap.min.css' %}" rel="stylesheet"> -->
-
     <!-- Twitter Bootstrap 4  -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="{% static 'portfolio/css/animation.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/features.css' %}">
 
     <!-- AngularJS Import -->
     <script src="{% static 'portfolio/js/angular.min.js' %}"></script>
@@ -43,7 +42,7 @@
 </div>
 
 <main role="main">
-<div class="container">
+<div class="container marketing">
 
     <!-- About -->
     <div class="row top-buffer">
@@ -210,8 +209,163 @@
             </div> <!-- End Col Experiences Section -->
 
 
-        </div> <!-- End Experience -->
+    </div> <!-- End Experience -->
 
+    <hr class="featurette-divider">
+    <h1 class="subject-header"><a href="{% url 'portfolio:projects' %}">Projects</a></h1>
+
+    <div class="row featurette wow fadeInUp">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Project Smart Egg! <span class="text-muted">Taking the egg drop competition to a new level.</span></h2>
+          <p class="lead">In preperation for the egg drop competiiton the Fablab held a 
+              <a href="{% url 'portfolio:smart-egg' %}" >"Hatchathon"</a>
+              with the object of creating the smartest egg on the planet.
+            </p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><strong>Tools: </strong></li>
+                <li class="list-inline-item">
+                  <a href="https://www.espressif.com/en/products/hardware/esp32/overview" target="_blank">ESP32</a> 
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://www.highcharts.com/" target="_blank">Highcharts JS</a> 
+              </li>
+                <li class="list-inline-item">
+                  A 3D printed egg
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://bulma.io/" target="_blank">Bluma's CSS Framework</a>
+                </li>
+            </ul>
+            <h5 class="text-left"><small class="text-muted">February/2018</small></h5>                                       
+        </div>
+        <div class="col-md-5">
+                <a href="{% url 'portfolio:smart-egg' %}" >
+                    <img class="featurette-image img-fluid mx-auto" src="{% static 'portfolio/img/smart-egg/egg-parts-ss.png' %}" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+                </a>
+        </div>
+      </div>
+      
+      <hr class="featurette-divider">
+      
+      <div class="row featurette wow fadeInUp">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">Algorithm Animation.</h2>
+          <p class="lead">My flight back to LA from Philly took forever, so I used it as an opportunity to build animations for some common sorting algorithms using D3. Here I randomly generate weighted lists of circles then, with the click of a button, I animate each step of the algorithm. </p>
+          <ul class="list-inline">
+              <li class="list-inline-item"><strong>Tools: </strong></li>
+              <li class="list-inline-item">
+                <a href="https://d3js.org/" target="_blank">D3 v4</a> 
+              </li>
+              <li class="list-inline-item">
+                <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap v3</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://pages.github.com/" target="_blank">Hosted using GitHub Pages</a>
+              </li>
+          </ul>
+          <h5 class="text-right"><small class="text-muted">January/2018</small></h5>                                       
+        </div>
+        <div class="col-md-5 order-md-1">
+            <a target="_blank" 
+            href="https://schretzilla.github.io/Algorithim-Animation/bubble-sort.html">
+          <img class="featurette-image img-fluid mx-auto" 
+            src="{% static 'portfolio/img/algorithm-animation.png' %}" 
+            data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+            </a>
+        </div>
+      </div>
+      
+      <hr class="featurette-divider">
+      
+      <!-- Advenutre America -->
+      <div class="row featurette wow fadeInUp">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Adventure America <span class="text-muted"></span></h2>
+          <p class="lead">A lot of people have asked, when you left your job to travle the country, what did you do?
+              so I used D3 to animate my
+              <a target="_blank" 
+              href="https://schretzilla.github.io/adventure-america/index" 
+              target="_blank">cross country adventure.</a>
+          </p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><strong>Tools: </strong></li>
+                <li class="list-inline-item"><a href="https://d3js.org/" target="_blank">D3 v4</a> </li>
+                <li class="list-inline-item"><a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap v3</a></li>
+                <li class="list-inline-item"><a href="https://angularjs.org/" target="_blank">AngularJS</a></li>
+                <li class="list-inline-item"><a href="https://pages.github.com/" target="_blank">Hosted using GitHub Pages</a></li>
+            </ul>
+            <h5 class="text-left"><small class="text-muted">January/2017</small></h5>                                       
+        </div>
+        <div class="col-md-5">
+            <a target="_blank" href="https://schretzilla.github.io/adventure-america/index" target="_blank">
+            <img class="featurette-image img-fluid mx-auto" src="{% static 'portfolio/img/x-country-adventure.png' %}" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          </a>
+        </div>
+      </div>
+      
+      <hr class="featurette-divider">
+      
+      <!-- ExQuizit -->
+      <div class="row featurette wow fadeInUp">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">ExQuizit</h2>
+            <p class="lead">
+                ExQuizit is a Python/Django + Angular web app that allows users to login, create, take and share quizzes with other users. 
+            </p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><strong>Tools: </strong></li>
+                <li class="list-inline-item">
+                  <a href="https://www.djangoproject.com/" target="_blank">
+                    Django 1.9</a> </li>
+                <li class="list-inline-item">
+                  Python 2.7</li>
+                <li class="list-inline-item"><a href="https://angularjs.org/" target="_blank">AngularJS 1</a></li>
+                <li class="list-inline-item"><a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap v3</a></li>
+                <li class="list-inline-item"><a href="http://www.django-rest-framework.org/" target="_blank">Django Rest Framework v3</a></li>
+                <li class="list-inline-item"><a href="http://www.https.postgresql.org/" target="_blank">PostgreSQL 9.2</a></li>
+                <li class="list-inline-item"><a href="https://www.heroku.com/" target="_blank">Hosted using Heroku</a></li>
+            </ul>
+            <h5 class="text-right"><small class="text-muted">January/2015</small></h5>                                       
+          </div>
+          <div class="col-md-5 order-md-1">
+              <a target="_blank" 
+              href="{% url 'dynoquiz:signin' %}">
+            <img class="featurette-image img-fluid mx-auto" 
+              src="{% static 'portfolio/img/quiz-rectangle.png' %}" 
+              data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+              </a>
+          </div>
+        </div>
+
+      <hr class="featurette-divider">
+      
+      <!-- ServiceBaseV -->
+        <div class="row featurette wow fadeInUp">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">ServiceBaseV</h2>
+              <p class="lead">                
+                SBV is a .Net web app for departmental knowledge management and problem tracking. 
+                The backend of ServiceBaseV was then used as the backbone to UPMC's Corporate 
+                wide Self-Help system.
+              </p>
+              <ul class="list-inline">
+                  <li class="list-inline-item"><strong>Tools: </strong></li>
+                  <li class="list-inline-item">C#</li>
+                  <li class="list-inline-item">.Net Web Application</li>
+                  <li class="list-inline-item">Microsoft SQL Database</li>
+                  <li class="list-inline-item">JavaScript/jQuery</li>
+                  <li class="list-inline-item"><a href="http://getbootstrap.com/2.3.2/" target="_blank">Twitter Bootstrap v2</a></li>
+                  <li class="list-inline-item">ADO .Net Entity Framework</li>
+              </ul>
+                <h5 class="text-left"><small class="text-muted">January/2015</small></h5>                                       
+            </div>
+            <div class="col-md-5">
+                <a target="_blank" href="{% url 'portfolio:self-help' %}" target="_blank">
+                <img class="featurette-image img-fluid mx-auto" src="{% static 'portfolio/img/self-help.png' %}" 
+                data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+              </a>
+            </div>
+          </div>
     <!-- Projects -->
     <div class="row top-buffer">
         <div class="col-md-10 col-md-offset-1">
@@ -558,6 +712,15 @@
     <!-- Google Analytics -->
     <script type="text/javascript" src="{% static 'portfolio/js/d3.v4.js' %}"></script>        
     <script src="{% static 'portfolio/js/animated-timeline.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="{% static 'portfolio/js/wow.min.js' %}"></script>
+
+    <script>
+      new WOW().init();
+    </script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
