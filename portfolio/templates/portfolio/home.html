@@ -239,9 +239,9 @@
             <h5 class="text-left"><small class="text-muted">February/2018</small></h5>                                       
         </div>
         <div class="col-md-5">
-                <a href="{% url 'portfolio:smart-egg' %}" >
-                    <img class="featurette-image img-fluid mx-auto" src="{% static 'portfolio/img/smart-egg/egg-parts-ss.png' %}" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-                </a>
+          <a href="{% url 'portfolio:smart-egg' %}" >
+              <img class="featurette-image img-fluid mx-auto" src="{% static 'portfolio/img/smart-egg/egg-parts-ss.png' %}" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          </a>
         </div>
       </div>
       
@@ -369,120 +369,31 @@
 
     <!-- End Projects Row -->
 
-    <div ng-app="home" ng-controller="HomeController" class="row top-buffer">
-            <h1 class="subject-header">I've Got Some Skills...</h2>
-
-            <div class="col-md-4">
-                <!-- Skills -->
-                <strong>Languages:</strong>
-                <ul class="list-unstyled">
-                    <li>
-                        C#                            
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped active" role="progressbar"
-                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:85%">
-                                85%
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        Python
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped active" role="progressbar"
-                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                70%
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-
-                <p><strong>Others Languages:</strong></p>
-                <ul class="list-inline">
-                    <li>Java</li>
-                    <li>JavaScript/jQuery</li>                        
-                    <li>Bash</li>
-                    <li>KornShell</li>
-                    <li>PHP</li>
-                    <li>Ruby</li>
-                    <li>VBA</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                </ul>
-
-
+    <!-- Skills -->
+    <h1 class="subject-header">My current tech stack...</h1>
+      
+    <div class="row wow fadeInUp">
+        <div class="col-sm-4">
+            <img src="{% static 'portfolio/img/skill-icons/csharp-25.png' %}" class="rounded mx-auto d-block" alt="...">
+          </div>
+          <div class="col-sm-4">
+              <img src="{% static 'portfolio/img/skill-icons/microsoft-net-128.png' %}" class="rounded mx-auto d-block" alt="...">
             </div>
-
-            <div class="col-md-4">
-                <!-- Skills -->
-                <strong>Frameworks:</strong>
-                <ul class="list-unstyled">
-                    <li>.Net</li>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped active" role="progressbar"
-                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-                            80%
-                        </div>
-                    </div>
-
-                    <li>Django</li>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped active" role="progressbar"
-                        aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:65%">
-                            65%
-                        </div>
-                    </div>
-                </ul>
-
-                <p><strong>Others Frameworks:</strong></p>
-                <ul class="list-inline">
-                    <li>Angular</li>
-                    <li>Django Rest Framework</li>
-                    <li>Bootstrap</li>
-                    <li>ADO .Net Entity Framework</li>
-                    <li>D3</li>
-                </ul>
-
-            </div>
-
-            <div class="col-md-4">
-                <!-- Skills -->
-                <strong>Operating Systems:</strong>
-                <ul class="list-unstyled">
-                    <li>UNIX</li>
-                    <div class="progress">
-                            <div class="progress-bar progress-bar-striped active" role="progressbar"
-                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:75%">
-                                75%
-                            </div>
-                        </div>
-                    <li>Windows</li>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-striped active" role="progressbar"
-                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:75%">
-                                75%
-                            </div>
-                        </div>
-                </ul>
-
-                <strong>Tools:</strong>
-                <ul class="list-inline">
-                    <li>Visual Code</li>
-                    <li>Open Shift</li>                
-                    <li>Microsoft SSMS</li>
-                    <li>Microsoft SSIS</li>
-                    <li>Splunk</li>
-                    <li>Version Control</li>
-                    <li>NetBeans</li>
-                    <li>Eclipse</li>
-                    <li>VIM</li>
-                    <li>Excel</li>
-                    <li>PyCharm</li>
-                    <li>PuTTY</li>
-                </ul>
-
-            </div>
-        
-    </div> <!-- End Skills Row-->
+          <div class="col-sm-4">
+              <img src="{% static 'portfolio/img/skill-icons/javascript-128.png' %}" class="rounded mx-auto d-block" alt="...">
+          </div>
+    </div>
+    <div class="row wow fadeInUp">
+        <div class="col-sm-4">
+            <img src="{% static 'portfolio/img/skill-icons/python-128.png' %}" class="rounded mx-auto d-block" alt="...">
+          </div>
+        <div class="col-sm-4">
+          <img src="{% static 'portfolio/img/skill-icons/django-128.png' %}" class="rounded mx-auto d-block" alt="...">
+        </div>
+        <div class="col-sm-4">
+            <img src="{% static 'portfolio/img/skill-icons/bootstrap-128.png' %}" class="rounded mx-auto d-block" alt="...">
+        </div>
+    </div>
 
     <!-- Extras Section-->
     <div class="row top-buffer">
