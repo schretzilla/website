@@ -10,6 +10,13 @@
    color: white;
 }
 
+#name-header {
+    font-size: 65px;
+}
+
+#name-description{
+    font-family: Optima;
+}
 .jumbotron {
     background-color: transparent;
 }

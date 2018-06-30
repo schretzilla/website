@@ -7,43 +7,33 @@
     <title>Home </title>
 
     <!-- Twitter Bootstrap3 Style Sheet -->
-    <link href="{% static 'portfolio/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- <link href="{% static 'portfolio/css/bootstrap.min.css' %}" rel="stylesheet"> -->
+
+    <!-- Twitter Bootstrap 4  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
     <!-- AngularJS Import -->
     <script src="{% static 'portfolio/js/angular.min.js' %}"></script>
     
-    <!-- Google Analytics -->
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <style>
+        .parallax {
+            /* The image used */
+            background-image: url("{% static 'portfolio/img/delicate-arch.jpg' %}");
+        }
+    </style>
 
-        ga('create', 'UA-82720914-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+    <link href="{% static 'portfolio/css/home.css' %}" rel="stylesheet">
+
 </head>
 
 <body>
 
-<style>
-    .parallax {
-        /* The image used */
-        background-image: url("{% static 'portfolio/img/delicate-arch.jpg' %}");
-    }
-</style>
-
-<link href="{% static 'portfolio/css/home.css' %}" rel="stylesheet">
-
-<script type="text/javascript" src="{% static 'portfolio/js/d3.v4.js' %}"></script>        
-<script src="{% static 'portfolio/js/animated-timeline.js' %}"></script>
-
 <div class="parallax">
     <div class="container">
             <div class="vertical-center jumbotron">
-                    <h1 class="text-center">Scott Schretzenmaier</h1>
-                    <p class="lead text-center">
+                    <h1 id="name-header" class="text-center">Scott Schretzenmaier</h1>
+                    <p id="name-description" class="lead text-center">
                         Software Engineer, Bug Squasher, Adventure Seeker
                     </p>                    
                     
@@ -52,16 +42,18 @@
 
 </div>
 
+<main role="main">
 <div class="container">
 
     <!-- About -->
     <div class="row top-buffer">
-        <div class="col-md-4">
-            <img src="{% static 'portfolio/img/mountaineering-1.png' %}" class="img-responsive center-block" alt="Profile Image"/>                
-        </div> <!--Col left -->
+        <div class="col-md-6">
+            <img src="{% static 'portfolio/img/mountaineering-1.png' %}" class="img-fluid" alt="Profile Image"/>                
+        </div> 
+        <!--Col left -->
 
-        <div class="col-md-6 col-md-offset-1">
-            <div class="page-header">
+        <div class="col-md-6">
+            <div class="page-header vertical-align">
                     <h1 class="subject-header">Hi, I'm Scott</h1>
                     <p class="lead about-me">
                         I'm a motivated guy who loves building software that gets stuff done. 
@@ -549,7 +541,9 @@
                 </div>
             </div>
     </div> <!-- End Extras Row -->
-</div>
+</div> <!-- End Container --> 
+
+</main>
 
 <div class="container">
         <footer class="footer">
@@ -561,7 +555,17 @@
 
 
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+    <!-- Google Analytics -->
+    <script type="text/javascript" src="{% static 'portfolio/js/d3.v4.js' %}"></script>        
+    <script src="{% static 'portfolio/js/animated-timeline.js' %}"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+        ga('create', 'UA-82720914-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
 </html>
