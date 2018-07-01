@@ -9,10 +9,11 @@
     <!-- Twitter Bootstrap 4  -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <!-- Fade In styles -->
     <link rel="stylesheet" href="{% static 'portfolio/css/animation.css' %}">
     <link rel="stylesheet" href="{% static 'portfolio/css/features.css' %}">
 
-    <!-- AngularJS Import -->
+    <!-- AngularJS Import for line animation-->
     <script src="{% static 'portfolio/js/angular.min.js' %}"></script>
     
     <!-- References to Slick JS for carousel -->
@@ -21,7 +22,6 @@
 
     <style>
         .parallax {
-            /* The image used */
             background-image: url("{% static 'portfolio/img/delicate-arch.jpg' %}");
         }
     </style>
@@ -59,15 +59,23 @@
             <div class="page-header vertical-align">
                     <h1 class="subject-header">Hi, I'm Scott</h1>
                     <p class="lead about-me">
-                        I'm a motivated guy who loves building software that gets stuff done. 
-                        I prefer backend development but I dabble a bit with the frontend.
+                        I'm a motivated guy who loves building awesome defense software. 
+                        I prefer backend development but I dabble with a bit of everything.
                         I'm also a big fan of agile processes, both in development and in life. 
                     </p>
                     
                     <ul class="list-inline">
                         <li class="contact-info"><strong>Email: </strong><a href="mailto:schretzy929@gmail.com">schretzy929@gmail.com</a></li>
                         <li class="contact-info"><strong>Location: </strong>Los Angeles, CA</li>
-                        <li class="contact-info">Resume: <a href="https://drive.google.com/file/d/1EQl5rqPQlm2Wa_DveyAIBIQDAdqFlbXO/view?usp=sharing" target="_blank">PDF</a></li>
+                        <li class="contact-info"><strong>Resume:</strong> <a href="https://drive.google.com/file/d/1EQl5rqPQlm2Wa_DveyAIBIQDAdqFlbXO/view?usp=sharing" target="_blank">PDF</a></li>
+                        <li class="contact-info"> 
+                          <a href="https://github.com/schretzilla" target="_blank">
+                            <img src="{% static 'portfolio/img/helper-icons/github-icon-35.png' %}" class="img-fluid" alt="Github Icon"/> 
+                          </a>
+                          <a href="http://www.linkedin.com/in/scott-schretzenmaier-26ab1178" target="_blank">
+                            <img src="{% static 'portfolio/img/helper-icons/linkedin-logo-35.png' %}" class="img-fluid" alt="LinkedIn Icon"/> 
+                          </a>
+                        </li>
                     </ul>
                     
             </div>
@@ -444,34 +452,34 @@
         <div class="col-md-8">
         <div  class="multiple-items">
             <div>
-                <img class="d-block w-100" src="{% static 'portfolio/img/extra-activities/ironman1.jpg' %}" alt="First slide">
+                <img class="d-block w-100" src="{% static 'portfolio/img/extra-activities/ironman1.jpg' %}" alt="Ironman">
                 <p class="text-center">I'm an ultra athlete, 
                   I've complete 7 marathons, won the Chi Town Half Marathon 
-                  and complete 2 Ironman competitions. </p>
+                  and completed 2 Ironman competitions. </p>
             </div>
             <div>
-                <img class="d-block w-100" src="{% static 'portfolio/img/extra-activities/wrestling-club.jpg' %}" alt="First slide">
+                <img class="d-block w-100" src="{% static 'portfolio/img/extra-activities/wrestling-club.jpg' %}" alt="Wreslting Club">
                 <p class="text-center">In college I had the opportunity to 
                   be president and coach of the University of Pittsburgh Wrestling Club.
                   Here I had the chance to lead a great team and wrestlers and
                   win quite a few championships. </p>
             </div>
             <div>
-                <img class="d-block w-100" src="{% static 'portfolio/img/extra-activities/samaritans-purse-group.jpg' %}" alt="First slide">
+                <img class="d-block w-100" src="{% static 'portfolio/img/extra-activities/samaritans-purse-group.jpg' %}" alt="Samaritain's Purse">
                 <p class="text-center">Over my trip across the country
-                  I signed up to become part of the Samaritan Purse's disaster 
+                  I signed up to become part of Samaritan Purse's disaster 
                   relief team. We volunteered in Baton Rouge to 
                   help the recent flood victims.</p>
             </div>
     
             <div>
-                <img class="d-block w-100" src="{% static 'portfolio/img/extra-activities/mountaineering.jpg' %}" alt="First slide">
+                <img class="d-block w-100" src="{% static 'portfolio/img/extra-activities/mountaineering-2.jpg' %}" alt="Adventure slide">
                 <p class="text-center">I love exploring the outdoors,
                   climbing and mountaineering.</p>
             </div>
     
             <div>
-                <img class="d-block w-100" src="{% static 'portfolio/img/extra-activities/high-school-wrestling.jpg' %}" alt="First slide">
+                <img class="d-block w-100" src="{% static 'portfolio/img/extra-activities/high-school-wrestling.jpg' %}" alt="High school wrestling">
                 <p class="text-center">In high school I was an
                   All American high school wrestler. </p>
             </div>
