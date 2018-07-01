@@ -15,10 +15,21 @@
     <!-- AngularJS Import -->
     <script src="{% static 'portfolio/js/angular.min.js' %}"></script>
     
+    <!-- References to Slick JS for carousel -->
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/slick/slick.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/slick/slick-theme.css' %}"/> 
+
     <style>
         .parallax {
             /* The image used */
             background-image: url("{% static 'portfolio/img/delicate-arch.jpg' %}");
+        }
+
+        .slick-prev:before {
+          color: black;
+        }
+        .slick-next:before {
+          color: black;
         }
     </style>
 
@@ -211,15 +222,19 @@
 
     </div> <!-- End Experience -->
 
-    <hr class="featurette-divider">
-    <h1 class="subject-header"><a href="{% url 'portfolio:projects' %}">Projects</a></h1>
+    <div class="wow fadeInUp">
+      <hr class="featurette-divider">
+      <h1 class="subject-header"><a href="{% url 'portfolio:projects' %}">Projects</a></h1>
+    </div>
 
-    <div class="row featurette wow fadeInUp">
+    <!-- Project Smart Egg -->
+    <div class="wow fadeInUp">
+      <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">Project Smart Egg! <span class="text-muted">Taking the egg drop competition to a new level.</span></h2>
-          <p class="lead">In preperation for the egg drop competiiton the Fablab held a 
+          <h2 class="featurette-heading">Project Smart Egg! <span class="text-muted">Taking the egg drop competition to new levels.</span></h2>
+          <p class="lead">In preparation for the egg drop competition the Fablab held a, 
               <a href="{% url 'portfolio:smart-egg' %}" >"Hatchathon"</a>
-              with the object of creating the smartest egg on the planet.
+               with the object of creating the smartest egg on the planet.
             </p>
             <ul class="list-inline">
                 <li class="list-inline-item"><strong>Tools: </strong></li>
@@ -244,10 +259,11 @@
           </a>
         </div>
       </div>
-      
+    </div>
+    <!-- Algorithim Animation -->
+    <div class="wow fadeInUp">
       <hr class="featurette-divider">
-      
-      <div class="row featurette wow fadeInUp">
+      <div class="row featurette">
         <div class="col-md-7 order-md-2">
           <h2 class="featurette-heading">Algorithm Animation.</h2>
           <p class="lead">My flight back to LA from Philly took forever, so I used it as an opportunity to build animations for some common sorting algorithms using D3. Here I randomly generate weighted lists of circles then, with the click of a button, I animate each step of the algorithm. </p>
@@ -274,15 +290,16 @@
             </a>
         </div>
       </div>
+    </div>
       
+    <!-- Advenutre America -->
+    <div class="wow fadeInUp">
       <hr class="featurette-divider">
-      
-      <!-- Advenutre America -->
-      <div class="row featurette wow fadeInUp">
+      <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">Adventure America <span class="text-muted"></span></h2>
-          <p class="lead">A lot of people have asked, when you left your job to travle the country, what did you do?
-              so I used D3 to animate my
+          <p class="lead">A lot of people have asked, "when you left your job to travel the country, what did you do?"
+              I used D3 to animate my
               <a target="_blank" 
               href="https://schretzilla.github.io/adventure-america/index" 
               target="_blank">cross country adventure.</a>
@@ -302,11 +319,13 @@
           </a>
         </div>
       </div>
-      
-      <hr class="featurette-divider">
+    </div>
       
       <!-- ExQuizit -->
-      <div class="row featurette wow fadeInUp">
+    <div class="wow fadeInUp">
+      <hr class="featurette-divider">
+      
+      <div class="row featurette">
           <div class="col-md-7 order-md-2">
             <h2 class="featurette-heading">ExQuizit</h2>
             <p class="lead">
@@ -336,16 +355,16 @@
               </a>
           </div>
         </div>
-
+    </div>
+    <!-- ServiceBaseV -->
+    <div class="wow fadeInUp">
       <hr class="featurette-divider">
-      
-      <!-- ServiceBaseV -->
-        <div class="row featurette wow fadeInUp">
+        <div class="row featurette">
             <div class="col-md-7">
               <h2 class="featurette-heading">ServiceBaseV</h2>
               <p class="lead">                
                 SBV is a .Net web app for departmental knowledge management and problem tracking. 
-                The backend of ServiceBaseV was then used as the backbone to UPMC's Corporate 
+                The backend of ServiceBaseV was then used as the backbone to UPMC's corporate 
                 wide Self-Help system.
               </p>
               <ul class="list-inline">
@@ -365,115 +384,118 @@
                 data-src="holder.js/500x500/auto" alt="Generic placeholder image">
               </a>
             </div>
-          </div>
-
+        </div>
+    </div>
     <!-- End Projects Row -->
 
     <!-- Skills -->
-    <h1 class="subject-header">My current tech stack...</h1>
-      
-    <div class="row wow fadeInUp">
-        <div class="col-sm-4">
+    <div class="wow fadeInUp">
+      <hr class="featurette-divider">
+
+      <h1 class="subject-header">My current tech stack</h1>
+        
+      <div class="row">
+          <div class="col-sm-4">
             <img src="{% static 'portfolio/img/skill-icons/csharp-25.png' %}" class="rounded mx-auto d-block" alt="...">
           </div>
           <div class="col-sm-4">
-              <img src="{% static 'portfolio/img/skill-icons/microsoft-net-128.png' %}" class="rounded mx-auto d-block" alt="...">
-            </div>
-          <div class="col-sm-4">
-              <img src="{% static 'portfolio/img/skill-icons/javascript-128.png' %}" class="rounded mx-auto d-block" alt="...">
+            <img src="{% static 'portfolio/img/skill-icons/microsoft-net-128.png' %}" class="rounded mx-auto d-block" alt="...">
           </div>
-    </div>
-    <div class="row wow fadeInUp">
-        <div class="col-sm-4">
+          <div class="col-sm-4">
+            <img src="{% static 'portfolio/img/skill-icons/javascript-128.png' %}" class="rounded mx-auto d-block" alt="...">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-4">
             <img src="{% static 'portfolio/img/skill-icons/python-128.png' %}" class="rounded mx-auto d-block" alt="...">
           </div>
-        <div class="col-sm-4">
-          <img src="{% static 'portfolio/img/skill-icons/django-128.png' %}" class="rounded mx-auto d-block" alt="...">
-        </div>
-        <div class="col-sm-4">
+          <div class="col-sm-4">
+            <img src="{% static 'portfolio/img/skill-icons/django-128.png' %}" class="rounded mx-auto d-block" alt="...">
+          </div>
+          <div class="col-sm-4">
             <img src="{% static 'portfolio/img/skill-icons/bootstrap-128.png' %}" class="rounded mx-auto d-block" alt="...">
-        </div>
+          </div>
+      </div>
     </div>
 
     <!-- School -->
-    <div class="row">
-        <h1 class="center">Education</h1> 
-    </div>
-    <div class="row vertical-align horizontal-align">
-      <div class="col-md-6">
-          <img src="{% static 'portfolio/img/graduation-1-200.jpg' %}" class="rounded mx-auto d-block" alt="...">
-      </div>
-      <div class="col-md-6">
-        <br>
-          <img src="{% static 'portfolio/img/university-of-pittsburgh-logo-300.png' %}"  class="" alt="...">
-        
-          <ul class="align middle list-unstyled">
-              <li>Graduated May 2014</li>
-              <li>GPA: 3.07</li>
-          </ul>
-          <ul class="list-unstyled">
-              <li><img class="wow fadeInUp" src="{% static 'portfolio/img/helper-icons/green-check-20.png' %}" alt="..."> <em>Bachelor of Science in Applied Mathematics</em></li>
-              <li><img class="wow fadeInUp" src="{% static 'portfolio/img/helper-icons/green-check-20.png' %}" alt="..."> <em>Bachelor of Arts in Anthropology</em></li>
-              <li><img class="wow fadeInUp" src="{% static 'portfolio/img/helper-icons/green-check-20.png' %}" alt="..."> <em>Minor in Computer Science</em></li>
-          </ul>
+    <div class="wow fadeInUp">
+      <hr class="featurette-divider">
+      <h1 class="subject-header">Education</h1>
+      <div class="row vertical-align horizontal-align">
+        <div class="col-md-6">
+            <img src="{% static 'portfolio/img/graduation-1-200.jpg' %}" class="rounded mx-auto d-block" alt="...">
+        </div>
+        <div class="col-md-6">
+          <br>
+            <img src="{% static 'portfolio/img/university-of-pittsburgh-logo-300.png' %}"  class="rounded mx-auto d-block" alt="...">
+            <ul class="align middle list-unstyled">
+                <li>Graduated May 2014</li>
+                <li>GPA: 3.07</li>
+            </ul>
+            <ul class="list-unstyled">
+                <li><img  src="{% static 'portfolio/img/helper-icons/green-check-20.png' %}"> <em>Bachelor of Science in Applied Mathematics</em></li>
+                <li><img  src="{% static 'portfolio/img/helper-icons/green-check-20.png' %}"> <em>Bachelor of Arts in Anthropology</em></li>
+                <li><img src="{% static 'portfolio/img/helper-icons/green-check-20.png' %}"> <em>Minor in Computer Science</em></li>
+            </ul>
+        </div>
       </div>
     </div>
 
     <!-- Extras Section-->
-    <div class="row top-buffer">
-            <h1 class="subject-header">All the Extras</h2>
-                
-                <div class="col-md-4">
-                    <h2 class="text-center">Education</h2>
-                    <ul class="list-unstyled">
-                        <li><strong>University of Pittsburgh</strong> Pittsburgh, PA  GPA: 3.07</li>
-                        <li></li>
-                        <li></li>
-                        <li>Graduated May 2014</li>
-                    </ul>
-                    <ul class="list-unstyled">
-                        <li><em>Bachelor of Science in Applied Mathematics</em></li>
-                        <li><em>Bachelor of Arts in Anthropology</em></li>
-                        <li><em>Minor in Computer Science</em></li>
-                    </ul>
-                </div>
-    
-                <div class="col-md-4">
-                    <h2 class="text-center">Extra Activities</h2>
-                    <ul>
-                        <li>All American Wrestler in PA State Competition</li>
-                        <li>Ultramarathons, rowing, cycling, judo, water polo, wrestling</li>
-                        <li>President and coach of the Wrestling Club, MEC Champion, NCWA National All American </li>
-                        <li>IRONMAN triathlete </li>
-                    </ul>
-    
-                </div>
-    
-                <div class="col-md-4">
-                    <h2 class="text-center">Civic Endevaors</h2>
-                    <ul>
-                        <li>Samaritan’s Purse - Flood victims site worker </li>
-                        <li>MS150 Ride for a Cure</li>
-                        <li>Higher Achievement – Teacher and Student Mentor</li>
-                        <li>Big Brother Big Sister</li>
-                        <li>“Eye to Eye” volunteer organization – local mentoring program</li>
-                        <li>Volunteer high school wrestling coach</li>
-                    </ul>
-                </div>
+    <div class="wow fadeInUp">
+      <hr class="featurette-divider">
+      <h1 class="subject-header">Away from the Screen</h1>
+      <div class="row align-items-center">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+        <div  class="multiple-items">
+            <div>
+                <img class="d-block w-100" src="{% static 'portfolio/img/extra-activities/ironman1.jpg' %}" alt="First slide">
+                <p class="text-center">I'm an ultra athlete, 
+                  I've complete 7 marathons, won the Chi Town Half Marathon 
+                  and complete 2 Ironman competitions. </p>
             </div>
-    </div> <!-- End Extras Row -->
+            <div>
+                <img class="d-block w-100" src="{% static 'portfolio/img/extra-activities/wrestling-club.jpg' %}" alt="First slide">
+                <p class="text-center">In college I had the opportunity to 
+                  be president and coach of the University of Pittsburgh Wrestling Club.
+                  Here I had the chance to lead a great team and wrestlers and
+                  win quite a few championships. </p>
+            </div>
+            <div>
+                <img class="d-block w-100" src="{% static 'portfolio/img/extra-activities/samaritans-purse-group.jpg' %}" alt="First slide">
+                <p class="text-center">Over my trip across the country
+                  I signed up to become part of the Samaritan Purse's disaster 
+                  relief team. We volunteered in Baton Rouge to 
+                  help the recent flood victims.</p>
+            </div>
+    
+            <div>
+                <img class="d-block w-100" src="{% static 'portfolio/img/extra-activities/mountaineering.jpg' %}" alt="First slide">
+                <p class="text-center">I love exploring the outdoors,
+                  climbing and mountaineering.</p>
+            </div>
+    
+            <div>
+                <img class="d-block w-100" src="{% static 'portfolio/img/extra-activities/high-school-wrestling.jpg' %}" alt="First slide">
+                <p class="text-center">In high school I was an
+                  All American high school wrestler. </p>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+
 </div> <!-- End Container --> 
 
 </main>
 
-<div class="container">
-        <footer class="footer">
-            <div class="pull-right">
-                <p class="text-muted">Updated: 1/2018</p>
-            </div>
-        </footer>
-    </div>
-
+<footer class="container">
+    <p class="float-right">Updated: 6/2018</p>
+  </footer>
+</main>
 
 
     <!-- Google Analytics -->
@@ -482,8 +504,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="{% static 'portfolio/js/slick.js' %}"></script>
     <script src="{% static 'portfolio/js/wow.min.js' %}"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.multiple-items').slick({
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: '50px',
+          adaptiveHeight: false,
+        });
+      });
+    </script>
 
     <script>
       new WOW().init();
