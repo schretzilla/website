@@ -4,7 +4,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Home </title>
+    <title>Schretzenmaier, Scott</title>
 
     <!-- Twitter Bootstrap 4  -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -23,13 +23,6 @@
         .parallax {
             /* The image used */
             background-image: url("{% static 'portfolio/img/delicate-arch.jpg' %}");
-        }
-
-        .slick-prev:before {
-          color: black;
-        }
-        .slick-next:before {
-          color: black;
         }
     </style>
 
@@ -233,7 +226,7 @@
         <div class="col-md-7">
           <h2 class="featurette-heading">Project Smart Egg! <span class="text-muted">Taking the egg drop competition to new levels.</span></h2>
           <p class="lead">In preparation for the egg drop competition the Fablab held a, 
-              <a href="{% url 'portfolio:smart-egg' %}" >"Hatchathon"</a>
+              <a href="{% url 'portfolio:smart-egg' %}" target="_blank">"Hatchathon"</a>
                with the object of creating the smartest egg on the planet.
             </p>
             <ul class="list-inline">
@@ -350,7 +343,7 @@
               <a target="_blank" 
               href="{% url 'dynoquiz:signin' %}">
             <img class="featurette-image img-fluid mx-auto" 
-              src="{% static 'portfolio/img/quiz-rectangle.png' %}" 
+              src="{% static 'portfolio/img/exquizit-results.png' %}" 
               data-src="holder.js/500x500/auto" alt="Generic placeholder image">
               </a>
           </div>
@@ -498,33 +491,32 @@
 </main>
 
 
-    <!-- Google Analytics -->
-    <script type="text/javascript" src="{% static 'portfolio/js/d3.v4.js' %}"></script>        
-    <script src="{% static 'portfolio/js/animated-timeline.js' %}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="{% static 'portfolio/js/slick.js' %}"></script>
-    <script src="{% static 'portfolio/js/wow.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'portfolio/js/d3.v4.js' %}"></script>        
+<script type="text/javascript" src="{% static 'portfolio/js/animated-timeline.js' %}"></script>
+<script type="text/javascript" src="{% static 'portfolio/js/jquery-3.3.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'portfolio/js/bootstrap-4.1.0.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'portfolio/js/slick.js' %}"></script>
+<script type="text/javascript" src="{% static 'portfolio/js/wow.min.js' %}"></script>
 
+    
     <script type="text/javascript">
       $(document).ready(function(){
         $('.multiple-items').slick({
           dots: true,
           infinite: true,
-          speed: 300,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: '50px',
+          speed: 500,
+          fade: true,
           adaptiveHeight: false,
         });
       });
     </script>
 
+   <!--WOW fade init  -->
     <script>
       new WOW().init();
     </script>
+
+    <!-- Google Analytics -->    
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

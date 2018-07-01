@@ -137,3 +137,12 @@
 body {
     margin: 0;
 }
+
+/* Carosel Styles */
+.slick-prev:before {
+  color: black;
+}
+
+.slick-next:before {
+  color: black;
+}
