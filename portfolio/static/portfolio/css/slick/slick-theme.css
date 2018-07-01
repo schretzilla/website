@@ -2,7 +2,15 @@
 /* Slider */
 .slick-loading .slick-list
 {
-    background: #fff url('./loading.png') center center no-repeat;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    /* background: #fff url('./loading.png') center center no-repeat; */
+=======
+    background: #fff url('./ajax-loader.gif') center center no-repeat;
+>>>>>>> parent of 0e87ae2... Replace Ajax-loader with loading png
+=======
+    background: #fff url('./ajax-loader.gif') center center no-repeat;
+>>>>>>> parent of 0e87ae2... Replace Ajax-loader with loading png
 }
 
 /* Icons */
