@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Fade In styles -->
-    <link rel="stylesheet" href="{% static 'portfolio/css/animation.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/animation.min.css' %}">
+
+    <!-- Features for Carousel -->
     <link rel="stylesheet" href="{% static 'portfolio/css/features.css' %}">
 
     <!-- AngularJS Import for line animation-->
@@ -26,6 +28,7 @@
         }
     </style>
 
+    <!-- Custome CSS styles -->
     <link href="{% static 'portfolio/css/home.css' %}" rel="stylesheet">
 
 </head>
@@ -223,6 +226,7 @@
 
     </div> <!-- End Experience -->
 
+    <!-- Projects -->
     <div class="wow fadeInUp">
       <hr class="featurette-divider">
       <h1 class="subject-header"><a href="{% url 'portfolio:projects' %}">Projects</a></h1>
@@ -498,26 +502,26 @@
   </footer>
 </main>
 
-
+<!-- D3 drawling for line animations -->
 <script type="text/javascript" src="{% static 'portfolio/js/d3.v4.js' %}"></script>        
+
+<!-- Custom script for line animation -->
 <script type="text/javascript" src="{% static 'portfolio/js/animated-timeline.js' %}"></script>
+
+<!-- Jquery Reference -->
 <script type="text/javascript" src="{% static 'portfolio/js/jquery-3.3.1.min.js' %}"></script>
+
+<!-- Bootstrap 4 JS Reference -->
 <script type="text/javascript" src="{% static 'portfolio/js/bootstrap-4.1.0.min.js' %}"></script>
+
+<!-- Slick Carousel Animation Script -->
 <script type="text/javascript" src="{% static 'portfolio/js/slick.js' %}"></script>
+
+<!-- Fadein animation scripts -->
 <script type="text/javascript" src="{% static 'portfolio/js/wow.min.js' %}"></script>
 
-    
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $('.multiple-items').slick({
-          dots: true,
-          infinite: true,
-          speed: 500,
-          fade: true,
-          adaptiveHeight: false,
-        });
-      });
-    </script>
+<!-- Animations for Carousel -->
+<script type="text/javascript" src="{% static 'portfolio/js/carousel-animation.js' %}"></script>
 
    <!--WOW fade init  -->
     <script>
